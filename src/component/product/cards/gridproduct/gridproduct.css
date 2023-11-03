@@ -1,0 +1,59 @@
+.top-img-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    padding: 20px;
+  }
+  .god
+  {
+    background-position: center !important;
+    background-size: 100% !important;
+
+  }
+  .top-img-group .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    width: 364.84px;
+   
+  }
+  
+  .top-img-group .imgB {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 91/92;
+    background-color: #dcdcdc;
+    
+  }
+  
+  .top-img-group .imgS {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 28/17;
+    background-color: #dcdcdc;
+    
+  }
+  
+  .top-img-group .frame-3 {
+    position: relative;
+    width: 364.84px;
+    aspect-ratio: 364/605;
+    background-color: #dcdcdc;
+    
+  }
+
+
+  @media (max-width: 768px) {
+    .top-img-group {
+        gap: 4px;
+    }
+ 
+      .top-img-group .frame {
+        gap: 4px;
+      }
+}

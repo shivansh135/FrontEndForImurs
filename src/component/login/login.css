@@ -1,0 +1,152 @@
+.PhoneInputCountry{
+    display: none !important;
+}
+.otp-page .input-group{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.blur-effect {
+    filter: blur(5px); /* You can adjust the blur amount as needed */
+    pointer-events: none; /* Prevent interactions with blurred elements */
+  }
+.otp-page .lable{
+    color: var(--Jet-Black, #333332);
+    font-family: 'HK Grotesk-Medium';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.otp-page .PhoneInputInput {
+    width: 350px !important;
+    border: 1px solid var(--Jet-Black, #333332) !important;
+    height: 64px !important;
+    overflow: hidden !important;
+    outline: none !important;
+}
+.otp-page .bttn{
+    width: fit-content;
+    margin: auto;
+    margin-top: -60px;
+}
+
+.otp-page .otp-input-cont{
+    align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.otp-page .otp-input{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: var(--Jet-Black, #333332);
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+    text-align: center;
+}
+
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+        
+.otp-page .text-wraper{
+    color: var(--Jet-Black, #333332);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'HK Grotesk-Medium';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: fit-content;
+    margin: auto;
+}
+
+.otp-page .text-wraper .link{
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.link .pencil{
+    width: 20px;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    .otp-page .PhoneInputInput {
+        width: 270px !important;
+        border: 1px solid var(--Jet-Black, #333332) !important;
+        height: 44px !important;
+        overflow: hidden !important;
+        outline: none !important;
+    }
+    .otp-page .otp-input-cont {
+        align-items: flex-start;
+        display: flex;
+        gap: 10px;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: auto;
+    }
+    .otp-page .otp-input{
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    .otp-page .phone{
+        width: 250px;
+        border: 1px solid var(--Jet-Black, #333332);
+        height: 44px;
+        overflow: hidden;
+        outline: none;
+    }
+    .otp-page .lable{
+        color: var(--Jet-Black, #333332);
+        font-family: 'HK Grotesk-Medium';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .otp-page .text-wraper{
+        color: var(--Jet-Black, #333332);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: 'HK Grotesk-Medium';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .otp-page .bttn{
+        width: fit-content;
+        margin: auto;
+        margin-top: -10px;
+    }
+    .link .pencil{
+        width: 10px;
+        height: auto;
+    }
+}

@@ -1,0 +1,64 @@
+.dashboard-body .button-secondary-dash {
+    align-items: center;
+    background-color: var(--jet-black);
+    display: inline-flex;
+    gap: 20px;
+    padding: 14px 20px;
+    position: relative;
+    border: 1px solid var(--jet-black);
+    width: fit-content;
+}
+
+.dashboard-body  .button-secondary-dash .text-wrapper {
+    color: var(--isabeline);
+    text-transform: uppercase;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+.dashboard-body .button-primary-dash {
+    align-items: center;
+    border: 1px solid var(--jet-black);
+    display: inline-flex;
+    gap: 20px;
+    padding: 14px 20px;
+    position: relative;
+}
+
+.dashboard-body  .button-primary-dash .text-wrapper {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+@media screen and (max-width:768px) {
+    .dashboard-body .button-secondary-dash {
+        padding: 12px 20px;
+    }
+    
+    .dashboard-body  .button-secondary-dash .text-wrapper {
+        font-size: 10px;
+    }
+    .dashboard-body .button-primary-dash {
+        padding: 12px 20px;
+    }
+    
+    .dashboard-body  .button-primary-dash .text-wrapper {
+        font-size: 10px;
+    }
+}

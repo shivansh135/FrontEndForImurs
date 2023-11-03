@@ -1,0 +1,11 @@
+.product-feedback-cont{
+    width: 45%;
+    margin: auto;
+}
+
+@media screen and (max-width:768px) {
+    .product-feedback-cont{
+        width: 75%;
+        margin: auto;
+    }
+}

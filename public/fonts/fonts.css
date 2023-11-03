@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'freight-big-pro
+';
+  src: url('HKGrotesk-Black.otf') format('truetype');
+}
+@font-face {
+  font-family: 'HK Grotesk-Bold';
+  src: url('HKGrotesk-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-BoldItalic';
+  src: url('HKGrotesk-BoldItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'freight-big-pro
+';
+  src: url('HKGrotesk-BoldLegacy.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'freight-big-pro
+Italic';
+  src: url('HKGrotesk-BoldLegacyItalic.otf') format('truetype');
+}
+
+@font-face { 
+  font-family: 'HK Grotesk-ExtraBold';
+  src: url('HKGrotesk-ExtraBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-Italic';
+  src: url('HKGrotesk-Italic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-LegacyItalic';
+  src: url('HKGrotesk-LegacyItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-Light';
+  src: url('HKGrotesk-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-LightItalic';
+  src: url('HKGrotesk-LightItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-LightLegacy';
+  src: url('HKGrotesk-LightLegacy.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-LightLegacyItalic';
+  src: url('HKGrotesk-LightLegacyItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-Medium';
+  src: url('HKGrotesk-Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-MediumItalic';
+  src: url('HKGrotesk-MediumItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-MediumLegacy';
+  src: url('HKGrotesk-MediumLegacy.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-MediumLegacyItalic';
+  src: url('HKGrotesk-MediumLegacyItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-Regular';
+  src: url('HKGrotesk-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-RegularLegacy';
+  src: url('HKGrotesk-RegularLegacy.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-SemiBold';
+  src: url('HKGrotesk-SemiBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-SemiBoldItalic';
+  src: url('HKGrotesk-SemiBoldItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-SemiBoldLegacy';
+  src: url('HKGrotesk-SemiBoldLegacy.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HK Grotesk-SemiBoldLegacyItalic';
+  src: url('HKGrotesk-SemiBoldLegacyItalic.otf') format('truetype');
+}

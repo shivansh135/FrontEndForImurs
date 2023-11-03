@@ -1,0 +1,116 @@
+.product {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+}
+
+.product .image {
+    height: 528px;
+    object-fit: cover;
+    position: relative;
+    width: 376px;
+}
+
+.product .text-wrap {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+    width: 100%;
+}
+
+.product .palak-and-dharmesh {
+    align-self: stretch;
+    color: transparent;
+    font-family: "HK Grotesk-Regular", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.product .text-wrapper {
+    color: #33333280;
+}
+
+.product .span {
+    color: #333332;
+    font-family: "HK Grotesk-Medium", Helvetica;
+    font-weight: 500;
+}
+
+.product .learn-more {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+}
+p{
+    margin: 0;
+}
+.product .div {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: fit-content;
+}
+.product .learn-more:hover
+{
+    opacity: 0.6;
+}
+.product .arrow-outward {
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+@media screen and (max-width: 768px) {
+    .product{
+        gap:8px;
+    }
+    .product .text-wrap{
+        gap: 12px !important;
+    }
+    .product .image{
+        width: 133px;
+        height: auto;
+    }
+    .product .palak-and-dharmesh{
+        font-size: 12px;
+    }
+    .product .div {
+        font-size: 12px;
+    font-weight: 400;
+
+    }
+    .product .span {
+        color: #333332;
+        font-family: "HK Grotesk-Medium", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .product .arrow-outward {
+        height: 16px;
+        position: relative;
+        width: 16px;
+
+    }
+    .product.text-wrap{
+        gap: 14px;
+    }
+}

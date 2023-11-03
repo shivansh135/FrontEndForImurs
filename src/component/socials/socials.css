@@ -1,0 +1,75 @@
+.socials {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.socials .text-wrapper {
+    letter-spacing: 0;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.socials .arrow-outward {
+    height: 30px;
+    margin-bottom: -0.5px;
+    margin-top: -0.5px;
+    position: relative;
+    width: 30px;
+}
+
+.socials.default {
+    border: 2px solid;
+    border-color: #000000;
+    gap: 10px;
+    height: 89px;
+    padding: 30px 40px;
+    width: 338px;
+}
+
+.socials.variant-4 {
+    border: 1px solid;
+    border-color: #000000;
+    gap: 10px;
+    height: 46px;
+    padding: 16px 36px;
+    width: 127px;
+}
+
+.socials.variant-2 {
+    background-color: var(--persian-red);
+    border: 2px solid;
+    border-color: var(--persian-red);
+    gap: 118px;
+    height: 89px;
+    padding: 30px 40px;
+    width: 338px;
+}
+
+.socials.default .text-wrapper {
+    color: #000000;
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+    margin-top: -2px;
+}
+
+.socials.variant-4 .text-wrapper {
+    color: #000000;
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+    margin-top: -1px;
+}
+
+.socials.variant-2 .text-wrapper {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    margin-top: -2px;
+}

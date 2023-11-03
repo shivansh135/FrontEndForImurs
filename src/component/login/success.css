@@ -1,0 +1,19 @@
+.Welcome_logo {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    animation: heartbeat 1.4s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: translateY(0%);
+    }
+    70% {
+      transform: translateY(7.7%);
+    }
+    100% {
+        transform: translateY(-2.3%);
+      }
+  }
+  

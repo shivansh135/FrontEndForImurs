@@ -1,0 +1,124 @@
+.flipbook-container-product {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    justify-content: flex-end;
+    padding: 0px 40px;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.flipbook-container-product .flipbook {
+    height: 664px;
+    object-fit: cover;
+    position: relative;
+    width: 469px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flipbook-container-product .cont {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 25px;
+    min-width: 500px;
+    position: relative;
+    max-width: fit-content;
+    height: 100%;
+    margin-top: auto;
+}
+
+.flipbook-container-product .text-wrap {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.flipbook-container-product .heading {
+    align-self: stretch;
+    color: var(--newjet-black);
+    font-family: "Alegreya Sans-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+}
+
+.flipbook-container-product .tag {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.flipbook-container-product .price{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .flipbook-container-product .flipbook {
+        width: 210px;
+        height: 297px;
+    }
+    .flipbook-container-product .heading {
+        color: var(--new-jet-black, #333332);
+        text-align: center;
+        font-family: freight-big-pro;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    
+    .flipbook-container-product .tag{
+        color: var(--new-jet-black, #333332);
+        text-align: center;
+        font-family: HK Grotesk;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
+        text-align: center;
+    }
+    .flipbook-container-product .cont {
+        min-width: 130px;
+        justify-content: center;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .flipbook-container-product .price{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .flipbook-container-product .text-wrap {
+        margin-bottom: 16px;
+    }
+    
+}

@@ -1,0 +1,62 @@
+.legal-cont{
+    font-family: "HK Grotesk-RegularLegacy",Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 15px;
+    display: flex;
+    padding: 0 50px;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--Jet-Black); 
+    background-color: var(--isabeline);
+}
+.legal-cont .flex{
+    display: flex;
+    align-content: center;
+    gap: 20px;
+}
+h1{
+    font-family: freight-big-pro, Helvetica;
+    color: var(--Jet-Black);
+
+}
+h3{
+    text-decoration: underline;
+    font-family: freight-big-pro, Helvetica;
+    color: var(--Jet-Black);
+}
+P,ul{
+    opacity: 0.8;
+}
+ol{
+    max-width: 768px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+@media screen {
+    .legal-cont{
+    font-family: "HK Grotesk-RegularLegacy",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    padding: 0 25px;
+    gap:20px;
+    color: var(--Jet-Black);
+    background-color: var(--isabeline);
+    }
+    ol{
+        max-width: 768px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    h1{
+        font-family: freight-big-pro, Helvetica;
+        color: var(--Jet-Black);
+
+    }
+    h3{
+        text-decoration: underline;
+        font-family: freight-big-pro, Helvetica;
+        color: var(--Jet-Black);
+    }
+}

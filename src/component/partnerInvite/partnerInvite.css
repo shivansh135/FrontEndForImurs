@@ -1,0 +1,130 @@
+.partner {
+    align-items: center;
+    background-color: var(--jet-black);
+    display: flex;
+    gap: 50px 20px;
+    padding: 60px;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.partner .img {
+    height: 513px;
+    position: relative;
+    width: 575px;
+}
+
+.partner .cont {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    min-width: 560px;
+    max-width: 0px;
+}
+
+.partner .heading {
+    color: var(--isabeline);
+    font-family: freight-big-pro, Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    width: fit-content;
+    position: relative;
+}
+
+
+.partner .text {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26.4px;
+    opacity: 0.4;
+    position: relative;
+    max-width: 500px;
+    min-width: 360px;
+    text-align: left;
+}
+
+/* .partner .button-secondary {
+    align-items: center;
+    border: 1px solid;
+    border-color: var(--isabeline);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 40px;
+    position: relative;
+    width: auto;
+} */
+
+.partner .become-a-partner {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+
+}
+
+@media screen and (max-width:768px) {
+    .partner {
+        padding: 40px 20px;
+    gap: 40px 20px;
+
+    }
+    
+    .partner .img {
+        height: auto;
+        width: 271px;
+        margin: auto;
+    }
+    
+    .partner .cont {
+        gap: 14px;
+        justify-content: center;
+        margin: auto;
+        min-width: 360px;
+    }
+    
+    .partner .heading {
+        font-size: 27px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .partner .text {
+        font-size: 12px;
+        min-width: 0px;
+        text-align: center;
+        line-height: 14px;
+    }
+    
+    /* .partner .button-secondary {
+        display: flex;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        width: fit-content;
+        margin: auto;
+    } */
+
+    .partner .become-a-partner {
+        font-size: 10px;
+
+    }
+}

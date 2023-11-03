@@ -1,0 +1,19 @@
+.plan-corporate
+{
+    margin-top: 0rem !important;
+}
+.plan-cards-flex
+{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 550px)
+{
+    .plan-corporate
+{
+    margin-top: 0rem !important;
+}
+}

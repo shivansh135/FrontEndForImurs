@@ -1,0 +1,523 @@
+
+.pricea-card {
+    align-items: flex-start;
+    background-color: var(--jet-black);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 110px;
+    padding: 50px;
+    position: relative;
+}
+
+.pricea-card .pricea-frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+.pricea-card .pricea-text-wrapper {
+    color: var(--isabeline);
+    font-family: "FreightBigProBook-Regular-☞", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.pricea-card .pricea-line {
+    height: 1px;
+    object-fit: cover;
+    position: relative;
+    width: 253px;
+}
+
+.pricea-card .pricea-div {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+}
+
+.pricea-card .pricea-auto-stories {
+    height: 26px;
+    position: relative;
+    width: 26px;
+}
+
+.pricea-card .pricea-button-label {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricea-card .pricea-frame-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.pricea-card .pricea-frame-3 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.pricea-card .pricea-text-wrapper-2 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-BoldLegacy", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricea-card .pricea-text-wrapper-3 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    text-decoration: line-through;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricea-card .pricea-text-wrapper-4 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricea-card .pricea-text-wrapper-5 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+/**/
+.priceb-card {
+    align-items: flex-start;
+    background-color: var(--isabeline);
+    border: 2px solid;
+    border-color: var(--jet-black);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 110px;
+    padding: 50px;
+    position: relative;
+}
+
+.priceb-card .priceb-frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+.priceb-card .priceb-text-wrapper {
+    color: var(--newjet-black);
+    font-family: "FreightBigProBook-Regular-☞", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.priceb-card .priceb-line {
+    height: 1px;
+    object-fit: cover;
+    position: relative;
+    width: 253px;
+}
+
+.priceb-card .priceb-div {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+}
+
+.priceb-card .priceb-img {
+    height: 26px;
+    position: relative;
+    width: 26px;
+}
+
+.priceb-card .priceb-button-label {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.priceb-card .priceb-line-2 {
+    height: 26px;
+    position: relative;
+    width: 1px;
+}
+
+.priceb-card .priceb-frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+}
+
+.priceb-card .priceb-button-label-2 {
+    color: var(--jet-black);
+    font-family: "Manrope-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.priceb-card .priceb-frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.priceb-card .priceb-frame-4 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.priceb-card .priceb-text-wrapper-2 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-BoldLegacy", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.priceb-card .priceb-text-wrapper-3 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    text-decoration: line-through;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.priceb-card .priceb-text-wrapper-4 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.priceb-card .priceb-text-wrapper-5 {
+    color: #33333266;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+/**/
+
+.pricec-card {
+    align-items: flex-start;
+    background-color: var(--isabeline);
+    border: 2px solid;
+    border-color: var(--jet-black);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 110px;
+    padding: 50px;
+    position: relative;
+}
+
+.pricec-card .pricec-frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+.pricec-card .pricec-text-wrapper {
+    color: var(--newjet-black);
+    font-family: "FreightBigProBook-Regular-☞", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.pricec-card .pricec-line {
+    height: 1px;
+    object-fit: cover;
+    position: relative;
+    width: 253px;
+}
+
+.pricec-card .pricec-frame-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 6px 6px;
+    position: relative;
+    width: 248px;
+}
+
+.pricec-card .pricec-div-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 6px;
+    position: relative;
+}
+
+.pricec-card .pricec-div {
+    height: 26px;
+    position: relative;
+    width: 115px;
+}
+
+.pricec-card .pricec-frame-2 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 6px;
+    position: relative;
+    width: 291px;
+}
+
+.pricec-card .pricec-frame-3 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+}
+
+.pricec-card .pricec-img {
+    height: 26px;
+    position: relative;
+    width: 26px;
+}
+
+.pricec-card .pricec-button-label {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricec-card .pricec-line-2 {
+    height: 26px;
+    position: relative;
+    width: 1px;
+}
+
+.pricec-card .pricec-frame-4 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+}
+
+.pricec-card .pricec-hd {
+    height: 27px;
+    position: relative;
+    width: 27px;
+}
+
+.pricec-card .pricec-button-label-2 {
+    color: var(--jet-black);
+    font-family: "Manrope-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricec-card .pricec-frame-5 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.pricec-card .pricec-frame-6 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.pricec-card .pricec-text-wrapper-2 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-BoldLegacy", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricec-card .pricec-text-wrapper-3 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    text-decoration: line-through;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricec-card .pricec-text-wrapper-4 {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.pricec-card .pricec-text-wrapper-5 {
+    color: #33333266;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}

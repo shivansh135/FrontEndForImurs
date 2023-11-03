@@ -1,0 +1,210 @@
+.feedback {
+    align-items: flex-start;
+    background-color: var(--isabeline);
+    border: 1px solid;
+    border-color: #000000;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 40px;
+    position: relative;
+    width: fit-content;
+    align-self: center;
+
+}
+
+.feedback .cont {
+    align-items: flex-end;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 40px;
+    position: relative;
+}
+
+.feedback .image {
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    width: 329px;
+}
+
+.feedback .text-wrap {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+}
+
+.feedback .heading {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.feedback .text-wrapper {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.feedback .div {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.6;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.feedback .text {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    opacity: 0.4;
+    position: relative;
+    width: 344px;
+}
+
+.feedback .img {
+    height: 71px;
+    left: 286px;
+    position: absolute;
+    top: -18px;
+    width: 86px;
+}
+
+.feedback .vector {
+    height: 71px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 71px;
+}
+
+.feedback_v3{
+    width: 100%;
+    height: auto;
+}
+.feedback_v3{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px)
+{
+    .feedback {
+        align-items: flex-start;
+        background-color: var(--isabeline);
+        border: 1px solid;
+        border-color: #000000;
+        display: inline-flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .feedback .cont {
+        align-items: flex-end;
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 10px;
+        position: relative;
+    }
+    
+    .feedback .image {
+        height: auto;
+        object-fit: cover;
+        position: relative;
+        width: 124px;
+    }
+    
+    .feedback .text-wrap {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+    }
+    
+    .feedback .heading {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 6px;
+        position: relative;
+    }
+    
+    .feedback .text-wrapper {
+        color: var(--jet-black);
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -1px;
+        position: relative;
+        width: fit-content;
+    }
+    
+    .feedback .div {
+        color: var(--jet-black);
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 8px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        opacity: 0.6;
+        position: relative;
+        white-space: nowrap;
+        width: fit-content;
+    }
+    
+    .feedback .text {
+        color: var(--jet-black);
+        font-family: "ABeeZee-Regular", Helvetica;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 15px;
+        opacity: 0.4;
+        position: relative;
+        width: 201px;
+    }
+    
+    .feedback .img {
+        height: 26px;
+        left: 118px;
+        position: absolute;
+        top: -8px;
+        width: 31px;
+    }
+    
+    .feedback .vector {
+        height: 27px;
+        left: 308px;
+        position: absolute;
+        top: -1px;
+        width: 27px;
+    }
+    
+}

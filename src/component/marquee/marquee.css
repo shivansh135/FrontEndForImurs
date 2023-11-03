@@ -1,0 +1,139 @@
+.marquee-cont{
+    background-color: var(--jet-black);
+    padding: 15px;
+}
+
+.marquee-cont-icon{
+  padding: 0px;
+}
+
+
+ .marquee {
+    align-items: center;
+    display: inline-flex;
+    gap: 18.75px;
+    position: relative;
+    margin-right: 20px;
+    justify-content: center;
+  }
+  
+  .marquee .text-wrapper {
+    color: #f7f5f2;
+    font-size: var(--font-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    font-family:'freight-big-pro' ;
+  }
+  
+  .marquee .star {
+    position: relative;
+    animation: rotate 2.5s normal linear infinite;
+    width: 28px;
+    height: auto;
+  }
+
+  .marquee-cont-icon .star{
+    animation: none;
+  }
+
+  .marquee-cont-icon .marquee{
+    flex-direction: row-reverse;
+  }
+
+  .marquee-cont-icon .text-wrapper{
+    color: var(--Jet-Black, #333332);
+    font-family: 'HK Grotesk',Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    opacity: 0.4;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .colab-marquee{
+    display: flex;
+    gap: 60px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .colab-marquee .colab-logo{
+      height: 80px;
+      width: auto;
+      filter: brightness(0.2);
+      opacity: 0.5;
+  }
+
+  @media screen and (max-width: 768px) {
+    .marquee-cont{
+      background-color: var(--jet-black);
+      padding: 10px;
+  }
+  
+  .marquee .text-wrapper {
+    font-size: 20px;
+  }
+    .marquee .star {
+      width: 22px;
+      height: auto;
+      position: relative;
+    }
+    .marquee {
+      align-items: center;
+      display: inline-flex;
+      gap: 12.75px;
+      position: relative;
+      margin-right: 20px;
+    }
+    .marquee-cont-icon .star{
+      animation: none;
+    }
+    .marquee-cont-icon .text-wrapper{
+      color: var(--Jet-Black, #333332);
+      font-family: 'HK Grotesk', Helvetica;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .colab-marquee{
+      width: 100%;
+    }
+    .colab-marquee .colab-logo{
+      height: 50px;
+      width: auto;
+  }
+  .colab-marquee{
+    display: flex;
+    gap: 30px;
+  }
+  }
+  
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% {
+      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50% {
+      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75% {
+      -webkit-transform: rotate3d(0, 0, 1, 270deg);
+      transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+  
+  

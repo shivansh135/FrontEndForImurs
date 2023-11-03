@@ -1,0 +1,10 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="web_stories">
+<mask id="mask0_1021_3892" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<rect id="Bounding box" width="28" height="28" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1021_3892)">
+<path id="web_stories_2" d="M19.9679 22.8624V5.11559H21.5833V22.8624H19.9679ZM4.80127 24.7694V3.23096H18.8013V24.7694H4.80127ZM22.75 20.9778V7.0002H23.7821V20.9778H22.75ZM5.96794 23.6028H17.6346V4.39762H5.96794V23.6028Z" fill="#333332"/>
+</g>
+</g>
+</svg>
