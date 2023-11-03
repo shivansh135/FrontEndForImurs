@@ -73,6 +73,9 @@ const Profile_Settings = (props) => {
       })
         .then((response) => {
           // Handle the response
+          if(response.status == 200){
+            window.location.reload()
+          }
           document.querySelector('.dashboard-body').style.pointerEvents = "all";
           document.querySelector('.dashboard-body').style.opacity = "1";
         })
@@ -99,7 +102,8 @@ const Profile_Settings = (props) => {
         city: formData.city,
         state: formData.State,
       };
-
+      document.querySelector('.dashboard-body').style.pointerEvents = "none";
+      document.querySelector('.dashboard-body').style.opacity = "0.7";
       fetch(process.env.REACT_APP_API_URL + 'api/updateaddress', {
         method: 'POST',
         headers: {
@@ -109,10 +113,16 @@ const Profile_Settings = (props) => {
         body: JSON.stringify(dataToUpdate),
       })
         .then((response) => {
-          // Handle the response
+          if(response.status == 200){
+            window.location.reload()
+            document.querySelector('.dashboard-body').style.pointerEvents = "all";
+          document.querySelector('.dashboard-body').style.opacity = "1";
+          }
         })
         .catch((error) => {
           // Handle any errors
+          document.querySelector('.dashboard-body').style.pointerEvents = "all";
+          document.querySelector('.dashboard-body').style.opacity = "1";
         });
     }
   };

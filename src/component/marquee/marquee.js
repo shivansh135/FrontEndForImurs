@@ -2,8 +2,84 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import "./marquee.css"
 
-
- 
+export const InfiniteMarquee1 = () => (
+  <Marquee className="marquee-cont" direction="right">
+    <div className="marquee">
+      <div className="text-wrapper">Beyond Images</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Preserving Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Home Decor</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Investment in Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Guaranteed Returns</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Immaterialistic Gifting</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Beyond Images</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Preserving Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Home Decor</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Investment in Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Guaranteed Returns</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Immaterialistic Gifting</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Beyond Images</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Preserving Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Home Decor</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Investment in Memories</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Guaranteed Returns</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper">Immaterialistic Gifting</div>
+      <img className="star" alt="Star" src="Marquee-Star.svg" />
+    </div>
+    
+  </Marquee>
+  
+);
 
 
 export const InfiniteMarquee = () => (
