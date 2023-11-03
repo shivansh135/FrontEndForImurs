@@ -44,8 +44,7 @@ export const Home = () => {
       <VideoBackground />
       <FlipbookContainer source={"Print_DikshaUtkarsh.pdf"} />
       <InfiniteMarquee />
-      <InfiniteMarquee />
-      <InfiniteMarquee />
+    
       <div className="cardsspacing">
         {" "}
         <MainHeading name="Imurs' Greatest Hits" />
