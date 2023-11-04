@@ -145,7 +145,7 @@ export const PriceCard2 = (props) => {
         </div>
     );
 };
-
+ 
 /*PriceCard.propTypes = {
     star: PropTypes.string,
     img: PropTypes.string,
