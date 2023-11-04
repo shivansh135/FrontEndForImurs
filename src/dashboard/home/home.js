@@ -35,7 +35,7 @@ export const DashboardHome = (props)=>{
             <div style={{width:'50%',aspectRatio:'494/282',backgroundColor:"var(--jet-black)"}}></div>
             </div> */}
 
-            <OrderCard></OrderCard>
+           
             <SimpleHeading text="Happy Reviews"/>
             <div style={{display:'flex',width:'100%',overflowX:'auto',gap:'10px'}}>
                 <div style={{width:'60%',flexShrink:'0'}}>
