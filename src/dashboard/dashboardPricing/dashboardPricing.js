@@ -5,7 +5,7 @@ export const DashboardPricing = (props)=>{
     
     return(
         <Dashboard data={props.data}>
-            <Plan/>
+            <Plan value={props.data}/>
         </Dashboard>
     )
     

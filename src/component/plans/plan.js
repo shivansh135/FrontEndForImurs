@@ -3,7 +3,7 @@ import { Corporate } from './corporate/corporate'
 
 import "./plan.css"
 import { PriceCard } from './plans-cards/planCards'
-export default function Plan() {
+export default function Plan(props) {
   const [bundlesData, setBundlesData] = useState([]);
   const [selectedMagazine, setSelectedMagazine] = useState(1);
   const [info,setinfo]=useState([]);
@@ -19,6 +19,10 @@ export default function Plan() {
     const[bullet1,setbullet1]=useState('');
     const[bullet2,setbullet2]=useState('');
     const[bullet3,setbullet3]=useState('');  
+    //info
+    const[id1,setid1]=useState('');
+    const[id2,setid2]=useState('');
+    const[id3,setid3]=useState(''); 
 
 
     const handleMagazineSelect = (selectedMagazine) => {
@@ -32,17 +36,20 @@ export default function Plan() {
         settxt1(iconicBundle.discription);
         setprice1(iconicBundle.price);
         setbullet1(iconicBundle.bullets)
+        setid1(iconicBundle._id)
       }
 
       if (impressionBundle) {
         settxt2(impressionBundle.discription);
         setprice2(impressionBundle.price)
         setbullet2(impressionBundle.bullets);
+        setid2(impressionBundle._id)
       }
       if (impressionBundle) {
         settxt3(idylicBundle.discription);
         setprice3(idylicBundle.price);
         setbullet3(idylicBundle.bullets);
+        setid3(idylicBundle._id)
       }
 
       
@@ -70,17 +77,20 @@ export default function Plan() {
           settxt1(iconicBundle.discription);
           setprice1('-');
           setbullet1(iconicBundle.bullets)
+          setid1(iconicBundle._id)
         }
   
         if (impressionBundle) {
           settxt2(impressionBundle.discription);
           setprice2('-')
           setbullet2(impressionBundle.bullets);
+          setid2(iconicBundle._id)
         }
         if (impressionBundle) {
           settxt3(idylicBundle.discription);
           setprice3('-');
           setbullet3(idylicBundle.bullets);
+          setid3(iconicBundle._id)
         }
        
       })
@@ -97,9 +107,9 @@ export default function Plan() {
     <div className="plan-cards-flex">
   {selectedMagazine ? (
     <>
-      <PriceCard out="outerstar.png" in="innerstar.png" text="Iconic" description={txt1} price={price1} bullets={bullet1} />
-      <PriceCard out="sun.png" in="transparent" text="Impression" cardColor="var(--persian-red)" description={txt2} price={price2} bullets={bullet2} />
-      <PriceCard out="newstar.png" in="transparent" text="Idyllic" description={txt3} price={price3} bullets={bullet3} />
+      <PriceCard out="outerstar.png" in="innerstar.png" text="Iconic" description={txt1} price={price1} bullets={bullet1}   id={id1} value={props.value}/>
+      <PriceCard out="sun.png" in="transparent" text="Impression" cardColor="var(--persian-red)" description={txt2} price={price2} bullets={bullet2} id={id2} value={props.value}/>
+      <PriceCard out="newstar.png" in="transparent" text="Idyllic" description={txt3} price={price3} bullets={bullet3} id={id3} value={props.value} />
     </>
   ) : null}
 </div>

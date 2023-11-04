@@ -44,7 +44,7 @@ function LandingRoutes() {
           <Route path="/product" element={<Product />} />
           <Route path="/register" element={<Form />} />
           <Route path="/price" element={<Price />} />
-          <Route path="/plans" element={<Plan />} />
+          <Route path="/plans" element={<Plan value={''} />} />
           <Route path="/login" element={<Otp />} />
           <Route path="/dashboard" element={<Success/>}></Route>
           <Route path='/registration' element={<Form/>} />

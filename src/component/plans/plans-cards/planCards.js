@@ -18,6 +18,12 @@ export const PriceCard = (props) => {
       setBullets(trimmedBulletsArray);
     }, [props.bullets]);
   
+ 
+
+
+
+
+
 
 
     return (
@@ -86,7 +92,9 @@ export const PriceCard = (props) => {
       ))}
     </div>
                 </div>
-                <ButtonPrimary/>
+
+                 <ButtonPrimary  plan={props} value={props.value} />
+               
                 
             </div>
         </div>
