@@ -21,91 +21,75 @@ export default function ProductGrid(props) {
         feedBackTitle: item.feedBackTitle,
         pdf: item.pdf,
         images: item.images,
-        bullets: item.bullets
+        bullets:item.bullets
       }));
       setProducts(mappedProducts);
     }
   }, [infoValue]);
 
-  // Number of items to display per page
-  const itemsPerPage = 6;
-  // Current page state
+  const numColumns = window.innerWidth >= 768 ? 3 : 2;
+
+  const itemsPerPage = 6; // Number of products to display per page
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Calculate the index of the first and last item on the current page
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  // Get the current items to display
-  const currentItems = products.slice(indexOfFirstItem, indexOfLastItem);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
-  // Total number of pages
+  // Calculate the number of total pages
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    if (pageNumber >= 1 && pageNumber <= totalPages) {
-      setCurrentPage(pageNumber);
-    }
-  };
+  // Get the current products to display on the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const productsToDisplay = products.slice(startIndex, endIndex);
 
   return (
     <div className="container">
-         
-           {window.innerWidth > 768 && (
-        <div className="row">
-          {currentItems.map((product) => (
-            <div className="col-6 col-sm-4" key={product.id}>
-               <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="row">
+        {productsToDisplay.map((product) => (
+          <div className={`col-${12 / numColumns}`} key={product.id}>
+            <Productcard
+              artwork={product.thumbnail}
+              info={product}
+              category={product.category}
+              title={product.title}
+            />
+          </div>
+        ))}
+      </div>
 
-    
-      {window.innerWidth <= 768 && (
-        <div className="row">
-          {currentItems.map((product) => (
-            <div className="col-6 col-sm-4" key={product.id}>
-               <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
-            </div>
-          ))}
-        </div>
-      )}
       <div className="mt-5" style={{ display: "flex", justifyContent: "center" }}>
-        <nav aria-label="...">
+        <nav aria-label="Pagination">
           <ul className="pagination">
-            <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-              <a
+            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+              <button
                 className="page-link"
                 onClick={() => handlePageChange(currentPage - 1)}
               >
                 Previous
-              </a>
+              </button>
             </li>
             {Array.from({ length: totalPages }, (_, index) => (
               <li
                 key={index}
-                className={`page-item ${currentPage === index + 1 ? "active" : ""}`}
+                className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}
               >
-                <a
+                <button
                   className="page-link"
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
-                </a>
+                </button>
               </li>
             ))}
-            <li
-              className={`page-item ${
-                currentPage === totalPages ? "disabled" : ""
-              }`}
-            >
-              <a
+            <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+              <button
                 className="page-link"
                 onClick={() => handlePageChange(currentPage + 1)}
               >
                 Next
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

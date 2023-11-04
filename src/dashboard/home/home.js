@@ -1,3 +1,4 @@
+import { useState ,useEffect} from "react"
 import { NavLink } from "react-router-dom"
 import { ButtonBlack } from "../../component/button/button"
 import { FeedbackNew } from "../../component/feedback/courosal/feedback1-cards/card1"
@@ -11,6 +12,17 @@ import { Dashboard } from "../structure/structure"
 import "./home.css"
 export const DashboardHome = (props)=>{
     console.log(props.data.isnew);
+
+
+
+
+
+
+
+
+
+
+
     return(
         <Dashboard data={props.data}>
             {props.data.isnew?<Reqsample/>:<CreateOrder data={props.data}/>}
@@ -22,6 +34,8 @@ export const DashboardHome = (props)=>{
             <div style={{width:'50%',aspectRatio:'494/282',backgroundColor:"var(--jet-black)"}}></div>
             <div style={{width:'50%',aspectRatio:'494/282',backgroundColor:"var(--jet-black)"}}></div>
             </div> */}
+
+            <OrderCard></OrderCard>
             <SimpleHeading text="Happy Reviews"/>
             <div style={{display:'flex',width:'100%',overflowX:'auto',gap:'10px'}}>
                 <div style={{width:'60%',flexShrink:'0'}}>
