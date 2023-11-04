@@ -1,13 +1,11 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Productcard } from './productCard/productCard';
-import './product-grid.css'
+import './product-grid.css';
+
 export default function ProductGrid(props) {
-
-
-
   const [products, setProducts] = useState([]);
-  const infoValue = props.info; // Store props.info in a constant variable
-  
+  const infoValue = props.info;
+
   useEffect(() => {
     if (infoValue) {
       const mappedProducts = infoValue.map(item => ({
@@ -28,86 +26,70 @@ export default function ProductGrid(props) {
       setProducts(mappedProducts);
     }
   }, [infoValue]);
-  
-   
 
+  const numColumns = window.innerWidth >= 768 ? 3 : 2;
 
+  const itemsPerPage = 6; // Number of products to display per page
+  const [currentPage, setCurrentPage] = useState(1);
 
-
-
-
-
-
-
-
-
- 
-  const numColumns = window.innerWidth >= 768 ? 3 : 2; 
-
- 
- 
-
-  // Function to create a row of columns
-  const createRow = (start, end) => {
-    return (
-      <div className="row" key={`row-${start}-${end}`}>
-        {products.slice(start, end).map((product) => (
-          <div className={`col-${12 / numColumns}`} key={product.id}  >
-            <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
-          </div>
-        ))}
-      </div>
-    );
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
-  // Calculate the number of rows needed
-  const numRows = Math.ceil(products.length / numColumns);
+  // Calculate the number of total pages
+  const totalPages = Math.ceil(products.length / itemsPerPage);
 
-  // Create an array to store the rows
-  const rows = [];
-  for (let i = 0; i < numRows; i++) {
-    const start = i * numColumns;
-    const end = start + numColumns;
-    rows.push(createRow(start, end));
-  }
+  // Get the current products to display on the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const productsToDisplay = products.slice(startIndex, endIndex);
 
   return (
     <div className="container">
-      {/* Display 3 columns for larger screens (PCs and tablets) */}
-      {window.innerWidth >= 768 && (
-        <div className="row">
-          {products.map((product) => (
-            <div className="col-6 col-sm-4" key={product.id}>
-               <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="row">
+        {productsToDisplay.map((product) => (
+          <div className={`col-${12 / numColumns}`} key={product.id}>
+            <Productcard
+              artwork={product.thumbnail}
+              info={product}
+              category={product.category}
+              title={product.title}
+            />
+          </div>
+        ))}
+      </div>
 
-      {/* Display 2 columns for small screens (mobile) */}
-      {window.innerWidth < 768 && (
-        <div className="row">
-          {products.map((product) => (
-            <div className="col-6 col-sm-4" key={product.id}>
-               <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
-            </div>
-          ))}
-        </div>
-      )}
-
-      <div className="mt-5" style={{ display: "flex", justifyContent: "center",display:'none' }}>
-        <nav aria-label="...">
+      <div className="mt-5" style={{ display: "flex", justifyContent: "center" }}>
+        <nav aria-label="Pagination">
           <ul className="pagination">
-            <li className="page-item disabled">
-              <a className="page-link">Previous</a>
+            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+              <button
+                className="page-link"
+                onClick={() => handlePageChange(currentPage - 1)}
+              >
+                Previous
+              </button>
             </li>
-            <li className="page-item"><a className="page-link" href="#">1</a></li>
-            <li className="page-item active" aria-current="page">
-              <a className="page-link" href="#">2</a>
-            </li>
-            <li className="page-item"><a className="page-link" href="#">3</a></li>
-            <li className="page-item">
-              <a className="page-link" href="#">Next</a>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <li
+                key={index}
+                className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}
+              >
+                <button
+                  className="page-link"
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              </li>
+            ))}
+            <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+              <button
+                className="page-link"
+                onClick={() => handlePageChange(currentPage + 1)}
+              >
+                Next
+              </button>
             </li>
           </ul>
         </nav>
