@@ -45,6 +45,7 @@ export const OrdersB2B = (props) => {
       {showAlert && <div className="alert">Your Sample Will be Delivered Shortly</div>}
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: "20px" }}>
         {/* Other content */}
+        <OrderCard/>
       </div>
     </Dashboard>
   );
