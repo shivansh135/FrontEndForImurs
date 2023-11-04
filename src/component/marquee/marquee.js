@@ -3,8 +3,6 @@ import Marquee from "react-fast-marquee";
 import "./marquee.css"
 
 
-
-
 export const InfiniteMarquee = () => (
   <Marquee className="marquee-cont" direction="right">
     <div className="marquee">

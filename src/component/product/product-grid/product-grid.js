@@ -49,7 +49,6 @@ export default function ProductGrid(props) {
       >
         <a
           className="page-link"
-          href="#"
           onClick={() => handlePageChange(i)}
         >
           {i}
@@ -79,7 +78,6 @@ export default function ProductGrid(props) {
             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
               <a
                 className="page-link"
-                href="#"
                 onClick={() => handlePageChange(currentPage - 1)}
               >
                 Previous
@@ -89,7 +87,6 @@ export default function ProductGrid(props) {
             <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
               <a
                 className="page-link"
-                href="#"
                 onClick={() => handlePageChange(currentPage + 1)}
               >
                 Next
@@ -101,3 +98,4 @@ export default function ProductGrid(props) {
     </div>
   );
 }
+ 
