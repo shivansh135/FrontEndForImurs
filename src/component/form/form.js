@@ -5,6 +5,7 @@ import { ButtonPrimary } from '../button1/button1';
 import { ButtonSecondary } from '../button/button';
 import { useNavigate } from 'react-router-dom';
 import { Banner } from '../../dashboard/home/home';
+import { ColabrationMarquee } from '../marquee/marquee';
 
 
 function FormGroup(props) {
@@ -196,7 +197,7 @@ function Form() {
           <BasicHeading text = {"Sign Up"}/>
           <label for="logo" className='logo-text'>
             <img src='/uplode.svg' style={{height:'100%',width:'auto'}}/>
-            Logo
+           Upload Logo
           </label>
           <input type='file' id="logo" hidden/>
 
@@ -218,11 +219,11 @@ function Form() {
         onChange={handleInputChange}
       />
         <div onClick={register}><ButtonPrimary style={{width:'100%'}} text="Register" /></div>
-        
-       
-        <div style={{marginBottom:'50px'}}></div>
       </div>
+       <ColabrationMarquee/>
+
       </div>
+      
     );
   
     }

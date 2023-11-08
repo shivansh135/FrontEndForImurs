@@ -53,7 +53,8 @@
     outline: none;
     background-color: transparent;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 0.25px solid black;
+    border-radius: 0;
 }
 
 .form .g2{

@@ -130,8 +130,8 @@
     
     .button-primary .text-wrapper {
       color: var(--isabeline);
-      font-family: 'HK Grotesk-MediumLegacy', Helvetica;
-      font-size: 12px;
+      font-family: 'HK Grotesk-Regular', Helvetica;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 0;
       line-height: normal;
