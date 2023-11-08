@@ -158,7 +158,8 @@ function App() {
 
   if (x === 1 || data === null) {
     return (
-      <Success/>
+      // <Success/>
+      <LandingRoutes />
     );
   }
 

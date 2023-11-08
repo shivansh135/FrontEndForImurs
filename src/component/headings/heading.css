@@ -14,6 +14,22 @@
     text-align: center;
     top: 0;
 }
+.basic-heading {
+    width: fit-content;
+}
+
+.basic-heading .text-wrapper {
+    color: var(--jet-black);
+    font-family: freight-big-pro, Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 76.8px;
+    position: relative;
+    text-align: center;
+    top: 0;
+}
 
 .simple-heading {
     width: 100%;
@@ -68,6 +84,14 @@
 
 @media screen and (max-width:768px) {
     .main-heading .text-wrapper {
+        color: var(--new-jet-black, #333332);
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .basic-heading .text-wrapper {
         color: var(--new-jet-black, #333332);
         text-align: center;
         font-size: 28px;

@@ -1,9 +1,10 @@
 import React ,{useState,useEffect}from 'react';
 import './form.css'
-import { MainHeading } from '../headings/heading';
+import { BasicHeading, MainHeading } from '../headings/heading';
 import { ButtonPrimary } from '../button1/button1';
 import { ButtonSecondary } from '../button/button';
 import { useNavigate } from 'react-router-dom';
+import { Banner } from '../../dashboard/home/home';
 
 
 function FormGroup(props) {
@@ -12,7 +13,7 @@ function FormGroup(props) {
   return (
     <div className="form-group">
       <div className="lable">
-        <span className="sequence">{sequence}</span>
+        {sequence!=""?<span className="sequence">{sequence}</span>:null}
         {label}
       </div>
       {inputType !== 'none' ? (
@@ -190,24 +191,33 @@ function Form() {
 
     return (
       <div className={`body ${isBlurred ? 'blur-effect' : ''}`}>
-        <MainHeading name = {"Registration Form"}/>
+        <Banner heading="Become a Partner" sub_heading="Adopt light, chic magazines for daily nostalgia"/>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',width:'80%',margin:'auto'}}>
+          <BasicHeading text = {"Sign Up"}/>
+          <label for="logo" className='logo-text'>
+            <img src='/uplode.svg' style={{height:'100%',width:'auto'}}/>
+            Logo
+          </label>
+          <input type='file' id="logo" hidden/>
+
+        </div> 
         <div className='form'>
         <div className="g2">
-          <FormGroup sequence="01"  label="Name" inputType="text" name="name" value={formData.name} onChange={handleInputChange} id='name'/>
-          <FormGroup sequence="02" label="City" inputType="text" name="city" value={formData.city} onChange={handleInputChange} id='city' />
+          <FormGroup sequence=""  label="*Brand Name" inputType="text" name="name" value={formData.name} onChange={handleInputChange} id='name'/>
+          <FormGroup sequence="" label="*E-mail" inputType="text" name="email" value={formData.email} onChange={handleInputChange} id='email' />
         </div>
         <div className='g2'>
-        <FormGroup sequence="03" label="Email" inputType="text" name="email" value={formData.email} onChange={handleInputChange} id='email' />
-        <FormGroup sequence="04" label="Uplode Brand Logo ?" name="logo" inputType="file" id='logo'/>
+        <FormGroup sequence="" label="City based in" inputType="text" name="city" value={formData.city} onChange={handleInputChange} id='city' />
+        {/* <FormGroup sequence="" label="Uplode Brand Logo ?" name="logo" inputType="file" id='logo'/> */}
         </div>
-        <FormGroup sequence="05" label="Select Your Category" inputType="none" />
+        <FormGroup sequence="" label="*You are a" inputType="none" />
         <RadioGroup
         options={names}
         name="type"
         value={formData.type}
         onChange={handleInputChange}
       />
-        <div onClick={register}><ButtonSecondary text="Register" /></div>
+        <div onClick={register}><ButtonPrimary style={{width:'100%'}} text="Register" /></div>
         
        
         <div style={{marginBottom:'50px'}}></div>

@@ -12,16 +12,17 @@ import { Dashboard } from "../structure/structure"
 import "./home.css"
 import { DashboardFeedBack } from "../cards/feedback/feedback"
 import { OrderCardV2 } from "../cards/ordercardv2"
-export const Banner = ({ heading, url, sub_heading, style = {} }) => {
+export const Banner = ({ heading, url, sub_heading,but=false, style = {} }) => {
     style['backgroundImage'] = `url('${url}')`;
   
     return (
       <div className="main-banner" style={style}>
         <div className="heading">{heading}</div>
         <div className="sub_heading">{sub_heading}</div>
-        <NavLink className="button" to="/createOrder">
+        {but?<NavLink className="button" to="/createOrder">
           Start your edition
-        </NavLink>
+        </NavLink>:null}
+        
       </div>
     );
   };
@@ -33,9 +34,9 @@ export const DashboardHome = (props)=>{
         <Dashboard data={props.data}>
             {props.data.isnew?<Reqsample/>:<CreateOrder data={props.data}/>}
             <div className="body">
-            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner1.jfif"/>
-            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner6.jpeg"/>
-            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner5.jfif"/>
+            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner1.jfif" but={true}/>
+            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner6.jpeg" but={true}/>
+            <Banner heading="Cherised Daily" sub_heading="Lighter then albums, heavier in memories." url="banner5.jfif" but={true}/>
             {/* <div style={{display:'flex',gap:'24px'}}>
             <div style={{width:'50%',aspectRatio:'494/282',backgroundColor:"var(--jet-black)"}}></div>
             <div style={{width:'50%',aspectRatio:'494/282',backgroundColor:"var(--jet-black)"}}></div>

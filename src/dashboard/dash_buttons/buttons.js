@@ -1,9 +1,9 @@
 import React from "react";
 import "./button.css";
 
-export const ButtonSecondary = ({text}) => {
+export const ButtonSecondary = ({text,style={}}) => {
     return (
-        <div className="button-secondary-dash">
+        <div className="button-secondary-dash" style={style}>
             <div className="text-wrapper">{text}</div>
         </div>
     );

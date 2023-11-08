@@ -9,6 +9,13 @@ export const MainHeading = (props ) => {
     );
 };
 
+export const BasicHeading = ({text})=>{
+    return (
+        <div className="basic-heading">
+            <div className="text-wrapper">{text}</div>
+        </div>
+    );
+}
 
 export const HedingSubheding = (props) => {
     return (
