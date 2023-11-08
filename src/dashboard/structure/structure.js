@@ -42,7 +42,7 @@ export const SideNavigation = () => {
         </NavLink>
         <NavLink exact to='/suvenir' className='button'>
           <img alt='logo' src='logos/redeem.svg'/>
-          <span className='text'>Suvenir</span>
+          <span className='text'>Souvenir</span>
         </NavLink>
       </div>
     );

@@ -15,22 +15,27 @@ const getstarted=()=>
   const requestOptions = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', 
     },
     body: JSON.stringify({ paymentID,value }),
+    credentials: 'include',
   };
   
   fetch(apiUrl, requestOptions)
     .then(response => {
       if (response.ok) {
         return response.json();
-      } else {
+      }
+      else if(response.status == 201){
+        window.location = '/login'
+      }
+       else {
         throw new Error('Network response was not ok');
       }
     })
     .then(data => {
-      // Handle the response from the server
-      console.log(data);
+        window.location = data.url
+      
     })
     .catch(error => {
       // Handle any errors that occur during the request

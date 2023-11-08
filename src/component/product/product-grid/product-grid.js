@@ -73,38 +73,30 @@ export default function ProductGrid(props) {
       )}
       <div className="mt-5" style={{ display: "flex", justifyContent: "center" }}>
         <nav aria-label="Pagination">
-          <ul className="pagination">
+          <ul className="pagination" style={{display:'flex',alignItems:'center',gap:'10px'}}>
             <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-              <a
+              <a style={{backgroundColor:'transparent',border:'none'}} 
                 className="page-link"
                 onClick={() => handlePageChange(currentPage - 1)}
               >
-                Previous
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+</svg>
               </a>
             </li>
-            {Array.from({ length: totalPages }, (_, index) => (
-              <li
-                key={index}
-                className={`page-item ${currentPage === index + 1 ? "active" : ""}`}
-              >
-                <a
-                  className="page-link"
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </a>
-              </li>
-            ))}
+            {currentPage + ' / ' + totalPages}
             <li
               className={`page-item ${
                 currentPage === totalPages ? "disabled" : ""
               }`}
             >
-              <a
+              <a  style={{backgroundColor:'transparent',border:'none'}}
                 className="page-link"
                 onClick={() => handlePageChange(currentPage + 1)}
               >
-                Next
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
               </a>
             </li>
           </ul>

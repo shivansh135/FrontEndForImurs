@@ -66,7 +66,7 @@ const CustomDropdown = ({ sequence,lable,options, selectedValue, onSelect, dropd
     onClick={() => handleSelect(option)}
   >
     {option}<br/>
-    {(index==recommend)?<span style={{fontSize:'7px',opacity:'0.5',fontStyle:'italic'}}> - Rec.</span>:''}
+    {(index==recommend)?<span style={{fontSize:'7px',opacity:'0.5',fontStyle:'italic'}}> - Recomm.</span>:''}
   </div>
 ))}
 

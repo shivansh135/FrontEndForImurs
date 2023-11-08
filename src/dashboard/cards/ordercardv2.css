@@ -1,0 +1,378 @@
+
+
+.order-cardV2 {
+    align-items: center;
+    background-color: #efefef;
+    display: inline-flex;
+    gap: 26px;
+    padding: 29px;
+    position: relative;
+    width: fit-content;
+}
+
+.order-cardV2 .image {
+    background-color: #ffffff;
+    height: 191px;
+    position: relative;
+    width: 148px;
+}
+
+.order-cardV2 .cont {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20.68px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.order-cardV2 .text-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.order-cardV2 .main-cont {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 11px;
+    justify-content: center;
+    position: relative;
+}
+
+
+.order-cardV2 .overlap-group {
+    background-size: 100% 100%;
+    height: 46px;
+    left: 2px;
+    position: relative;
+    width: 46px;
+    background-size: 100% auto;
+    background-position: center;
+    background-image: url('../../../public/logos/planSymbol/idyllic.svg');
+}
+
+.order-cardV2 .name {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin-top: -0.85px;
+    position: relative;
+    width: fit-content;
+}
+
+.order-cardV2 .text-wrapper {
+    font-weight: 700;
+}
+
+.order-cardV2 .span {
+    font-family: "HK Grotesk-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.9px;
+}
+
+.order-cardV2 .flex {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.order-cardV2 .div {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+}
+
+.order-cardV2 .text {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.6;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.order-cardV2 .status-cont {
+    align-items: center;
+    border-color: #000000;
+    border-left-style: solid;
+    border-left-width: 0.25px;
+    display: flex;
+    gap: 3px;
+    padding: 0px 0px 0px 7.5px;
+    position: relative;
+}
+
+.order-cardV2 .icon {
+    height: 14px;
+    position: relative;
+    width: 14px;
+}
+
+.order-cardV2 .status {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -2px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.order-cardV2 .share {
+    border: 0.3px solid;
+    border-color: var(--jet-black);
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-cardV2 .img {
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.order-cardV2 .button {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--persian-red);
+    display: flex;
+padding: 14.706px 29.412px;
+justify-content: center;
+align-items: center;
+gap: 25.147px;
+align-self: stretch;
+}
+
+.order-cardV2 .text-2 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.85px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+@media screen and (max-width:768px) {
+    
+.order-cardV2 {
+    align-items: center;
+    background-color: #efefef;
+    display: inline-flex;
+    gap: 18px;
+    justify-content: center;
+    min-height: 170px;
+    min-width: 324px;
+    padding: 20px;
+    position: relative;
+}
+
+.order-cardV2 .image {
+    background-color: #ffffff;
+    height: 130px;
+    position: relative;
+    width: 101px;
+}
+
+.order-cardV2 .cont {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 13.68px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.order-cardV2 .text-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    width: 165px;
+}
+
+.order-cardV2 .main-cont {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 8px 8px;
+    justify-content: center;
+    position: relative;
+}
+
+.order-cardV2 .group {
+    height: 31.5px;
+    position: relative;
+    width: 31.5px;
+}
+
+.order-cardV2 .overlap-group {
+    background-size: 100% 100%;
+    height: 32px;
+    left: 2px;
+    position: relative;
+    width: 27px;
+    background-image: url('../../../public/logos/planSymbol/idyllic.svg');
+}
+
+.order-cardV2 .name {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin-top: -0.85px;
+    position: relative;
+    width: fit-content;
+}
+
+.order-cardV2 .text-wrapper {
+    font-weight: 700;
+}
+
+.order-cardV2 .span {
+    font-family: "HK Grotesk-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16.9px;
+}
+
+.order-cardV2 .flex {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    width: 165px;
+}
+
+.order-cardV2 .div {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+    width: 126px;
+}
+
+.order-cardV2 .text {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.6;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.order-cardV2 .status-cont {
+    align-items: center;
+    border-color: #000000;
+    border-left-style: solid;
+    border-left-width: 0.25px;
+    display: flex;
+    gap: 3px;
+    padding: 0px 0px 0px 5px;
+    position: relative;
+    width: 44px;
+}
+
+.order-cardV2 .icon {
+    height: 10px;
+    position: relative;
+    width: 10px;
+}
+
+.order-cardV2 .status {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -2px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.order-cardV2 .share {
+    border: 0.3px solid;
+    border-color: var(--jet-black);
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-cardV2 .img {
+    height: 10px;
+    position: relative;
+    width: 10px;
+}
+
+.order-cardV2 .button {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--persian-red);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 17.1px;
+    justify-content: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.order-cardV2 .text-2 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 8.5px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.85px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+}

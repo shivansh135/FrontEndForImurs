@@ -29,14 +29,23 @@
     width: fit-content;
 }
 @media screen and (max-width:768px) {
-    .dashboard-body .dash-footer {
-        display: none;
+    .dashboard-body .dash-footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        opacity: 0.7;
     }
     .dashboard-body .dash-footer .link-cont{
         display: flex;
+        flex-direction: column;
         gap: 5px 15px;
         width: fit-content;
         flex-wrap: wrap;
+    }
+    .dashboard-body .dash-footer .icon-cont{
+        display: flex;
+        gap: 18px;
+        width: fit-content;
     }
     .dashboard-body .dash-footer .link-cont .link{
         font-size: 10px;

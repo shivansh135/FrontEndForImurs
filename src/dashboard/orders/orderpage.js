@@ -85,24 +85,9 @@ export const OrdersB2B = (props) => {
 }
 
 
-
-
-
-
-
-
   return (
     <Dashboard data={props.data}>
-<<<<<<< HEAD
-      {props.data.isnew ? <Reqsample /> : <NavLink to="/createOrder"><CreateOrder data={props.data} /></NavLink>}
-      {showAlert && <div className="alert">Your Sample Will be Delivered Shortly</div>}
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: "20px" }}>
-        {/* Other content */}
-        <OrderCard/>
-      </div>
-    </Dashboard>
-=======
-  {props.data.isnew ? <Reqsample /> : <NavLink to="/createOrder"><CreateOrder data={props.data} /></NavLink>}
+  {<NavLink to="/createOrder"><CreateOrder data={props.data} /></NavLink>}
   {showAlert && <div className="alert">Your Sample Will be Delivered Shortly</div>}
   <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: "20px" }}>
     {orders.map((order) => (
@@ -111,6 +96,5 @@ export const OrdersB2B = (props) => {
   </div>
 </Dashboard>
 
->>>>>>> 43b6dc9715de974bb3b4f3b611c4709752a2993f
   );
 };

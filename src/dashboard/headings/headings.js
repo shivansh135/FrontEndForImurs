@@ -7,7 +7,7 @@ export const Tag_1 = (props) => {
     return (
         <div className="tag1">
             <div className="text-wrapper">Hello {props.data.name.split(' ')[0]}</div>
-            <div className="div">Welcome Back!</div>
+            <div className="div">Adopt light, chic magazines for daily nostalgia</div>
         </div>
     );
 };

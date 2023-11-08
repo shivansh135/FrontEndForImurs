@@ -22,6 +22,8 @@ import Productdash from './component/product/productdash';
 
 import { OrderSample } from './dashboard/new-form/forms/order-sample';
 import CreateOrder from './dashboard/new-form/forms/order-form';
+import CheckOut from './dashboard/checkout/checkout';
+import { TailSpin } from 'react-loader-spinner';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -92,7 +94,12 @@ function DashboardRoutes(props) {
   console.log(suvenirProducts)
   console.log(portfolioProducts)
 
-
+  if (localStorage.getItem('refreshPage') == 'true' && window.location.pathname !== '/processPayment') {
+    localStorage.setItem('refreshPage', 'false');
+    window.location.reload();
+  }
+  
+  
 
 
 
@@ -110,6 +117,7 @@ function DashboardRoutes(props) {
           <Route path='/product' element={<Productdash data={props.data}/>}/>
           <Route path='/sample' element={<OrderSample data={props.data}/>} />
           <Route path='/createOrder' element={<CreateOrder data={props.data}/>} />
+          <Route path='/processPayment' element={<CheckOut data={props.data}/>} />
         </Routes>
       </div>
     </Router>
@@ -118,16 +126,17 @@ function DashboardRoutes(props) {
 
 function App() {
   const [x, setX] = useState(1);
-  const [data,setdata] = useState('');
+  const [data, setData] = useState(null); // Initialize with null
+
   useEffect(() => {
     // Make an API call to check if the user is authenticated.
     // Replace this with your actual API call logic.
-    fetch(process.env.REACT_APP_API_URL+'api/login', {
+    fetch(process.env.REACT_APP_API_URL + 'api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      credentials: 'include'
+      credentials: 'include',
     })
       .then((response) => {
         if (response.ok) {
@@ -138,20 +147,23 @@ function App() {
       })
       .then((data) => {
         if (data) {
-          setdata(data);
+          setData(data); // Update the data state
           setX(data.user === false ? true : false);
         }
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-  }, []);
+  }, []); // Empty dependency array
 
-  if (x === null) {
-    return <div>Loading...</div>;
+  if (x === 1 || data === null) {
+    return (
+      <Success/>
+    );
   }
 
   return x ? <LandingRoutes /> : <DashboardRoutes data={data} />;
 }
+
 
 export default App;

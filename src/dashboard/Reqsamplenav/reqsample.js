@@ -8,7 +8,7 @@ export  function Reqsample() {
     <div style={{display:'flex',justifyContent:'flex-end',gap:'24px'}}>
                
     <NavLink to="/sample"><ButtonPrimary text='Request a Sample'/></NavLink>
-    <div>  <NavLink to='/createOrder'> <ButtonSecondary text='creare order'/></NavLink></div>
+    <div>  <NavLink to='/createOrder'> <ButtonSecondary text='create order'/></NavLink></div>
     
 </div>
   )

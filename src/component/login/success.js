@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './success.css'
-import { MainHeading } from '../headings/heading';
+import { HedingSubheding, MainHeading } from '../headings/heading';
+import { FallingLines, Oval, TailSpin } from 'react-loader-spinner';
 export default function Success() {
   useEffect(() => {
     // Check if the page has been reloaded before
@@ -14,11 +15,23 @@ export default function Success() {
   }, []);
 
   return (
-    <div className='body'>
-
-        <MainHeading name="Loading..."/>
-        <img className='Welcome_logo' alt="ImUrs" src='imurs_logo.png' />
-        <MainHeading name="Please Wait"/>
+    <div className='body' style={{justifyContent:'center',alignItems:'center'}}>
+        <HedingSubheding heading="ImUrs" sub_heading="Renovation home with memories"/>
+<TailSpin
+  height="80"
+  width="80"
+  color="var(--newpersian-red)"
+  ariaLabel="tail-spin-loading"
+  radius="1"
+  wrapperStyle={{
+    backgroundImage: 'url(magazine.svg)',
+    backgroundSize:'50%',
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+  wrapperClass=""
+  visible={true}
+/>
     </div>
   );
 }

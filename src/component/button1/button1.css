@@ -8,6 +8,7 @@
     padding: 20px 40px;
     position: relative;
     width: 100%;
+    background-color: var(--isabeline);
     
   }
 
@@ -16,7 +17,7 @@
   }
   
   .button-primary .text-wrapper {
-    color: var(--isabeline);
+    color: var(--jet-black);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 16px;
     font-weight: 600;
@@ -30,7 +31,7 @@
   }
   
   .button-primary:hover {
-    background-color: #b73e33;
+    background-color: transparent;
     border-color: var( --isabeline);
   }
   
@@ -45,13 +46,13 @@
         display: inline-flex;
         gap: 20px;
         justify-content: center;
-        padding: 10px 20px;
+        padding: 16px 20px;
         position: relative;
         width: 100%;
       }
       
       .button-primary .text-wrapper {
-        color: var(--isabeline);
+        color: var(--jet-black);
         font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
         font-size: 10px;
         font-weight: 600;

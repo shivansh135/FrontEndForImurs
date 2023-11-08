@@ -50,27 +50,38 @@ export const OrderSample = (props) => {
         quantity: selected_quantity,
         _id: props._id
       };
+  const apiUrl = process.env.REACT_APP_API_URL + "api/paymentForSample";
+
   console.log(data)
       // Make the fetch request here
-      fetch(process.env.REACT_APP_API_URL+'api/order-sample', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          console.log(response.data)
-          if(response.status == 201){
-            window.location.reload()
-          }else{
-            alert("Error")
-          }
-        })
-        .catch((error) => {
-          // Handle any errors, e.g., show an error message
-        });
+      const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', 
+    },
+    body: JSON.stringify(data),
+    credentials: 'include',
+  };
+  
+  fetch(apiUrl, requestOptions)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      else if(response.status == 201){
+        window.location = '/login'
+      }
+       else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .then(data => {
+        window.location = data.url
+    })
+    .catch(error => {
+      // Handle any errors that occur during the request
+      console.error("Error sending payment ID: " + error);
+    });
     } else {
       // Display an error message indicating that all fields must be filled and the checkbox must be checked.
       alert('Please fill in all fields and check the checkbox.');
@@ -80,7 +91,7 @@ export const OrderSample = (props) => {
 
   return (
     <Dashboard data={props.data}>
-      <HedingSubheding heading="Physical Sample" sub_heading="Physical Sample Physical Sample HedingSubheding OrderSample" />
+      <HedingSubheding heading="Physical Sample" sub_heading="A non-customized copy of imurs printed as per your specifications to match your taste." />
       <img src="physical_sample.jpg" alt="sample_img" style={{width:'80%',margin:'auto',maxWidth:'540px'}}/>
       <div style={{display:'flex',gap:'40px'}}>
 
@@ -133,13 +144,13 @@ export const OrderSample = (props) => {
         </div>
     </div>
     <div className='chackbox-group'>
-            <input type="checkbox" id="conf" name="conf" value="conf" />
+            <input type="checkbox" id="conf" name="conf" value="conf" style={{width:'30px'}}/>
             <label for="conf">
             I understand that sampling charge is a nominal fee and has nothing to do with the actual price of the product.            </label>
         </div>
     <div style={{width:'fit-content',margin:'auto'}}>
     <div onClick={() => handleSubmit(props.data, document.getElementById('form'))} style={{ width: 'fit-content', cursor: 'pointer' }}>
-  <ButtonSecondary text="Submit" />
+  <ButtonSecondary text="Pay ₹299" />
 </div>
 
     </div>    

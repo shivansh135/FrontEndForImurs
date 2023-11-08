@@ -11,21 +11,84 @@
 
 .main-banner {
     width: 100%;
-    aspect-ratio: 1/0.8;
+    aspect-ratio: 1021/815;
     background-color: var(--jet-black);
     background-size: 100% auto;
     background-position: center;
-    background-position-y: -160px;
+    /* background-position-y: -160px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 70px;
+}
+
+.main-banner .heading{
+    color: var(--Isabeline, #F7F5F2);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'freight-big-pro', Helvetica;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.main-banner .sub_heading{
+    color: var(--Isabeline, #F7F5F2);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family:'HK Grotesk-Regular';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-banner .button{
+    display: flex;
+    padding: 20px 30px;
+    align-items: center;
+    gap: 20px;
+    font-family:'HK Grotesk-Regular';
+    color: var(--Jet-Black, #333332);
+    background-color: #fff;
+    width: fit-content;
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+margin-top: 10px;
 }
 
 @media screen and (max-width:768px) {
     .main-banner{
         width: 100%;
-        aspect-ratio: 5/4;
+        aspect-ratio: 316/253;
+
         background-color: var(--jet-black);
         /* background-size: auto 100%; */
-        background-position-y: -46px;
-
+        /* background-position-y: -46px; */
+        gap: 5px;
+        padding: 20px;
+    }
+    .main-banner .heading{
+        font-size: 20px;
+    }
+    
+    .main-banner .sub_heading{
+        font-size: 10px;
+    }
+    
+    .main-banner .button{
+        font-size: 6px;
+        display: flex;
+padding: 8px 10px;
+justify-content: center;
+align-items: center;
     }
 }
 

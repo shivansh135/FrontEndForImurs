@@ -24,9 +24,10 @@
 
 .price-card .title {
     align-items: center;
-    background-color: #f7f5f2;
+    background-color: rgba(247 245 242 / 20%);
     display: inline-flex;
     flex: 0 0 auto;
+    color: var(--isabeline);
     gap: 10px;
     justify-content: center;
     padding: 16px 32px;
@@ -34,8 +35,8 @@
 }
 
 .price-card .head .text-wrapper {
-    color: #333332;
-    font-family: "FreightBigProBook-Regular-☞", Helvetica;
+    color: var(--isabeline);
+    font-family: freight-big-pro;
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 0;
@@ -162,7 +163,6 @@
     
     .price-card .title {
         align-items: center;
-        background-color: #f7f5f2;
         display: inline-flex;
         flex: 0 0 auto;
         gap: 10px;

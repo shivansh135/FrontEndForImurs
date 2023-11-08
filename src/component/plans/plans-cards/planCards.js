@@ -86,7 +86,7 @@ export const PriceCard = (props) => {
                     <div className="bullets-cont">
       {bullets.map((bullet, index) => (
         <div className="bullet" key={index}>
-          <img className="check-circle" alt="Check circle" src="check-circle.png" />
+          <img className="check-circle" alt="Check circle" src="check_circle.svg" />
           <div className="div">{bullet}</div>
         </div>
       ))}
@@ -122,19 +122,19 @@ export const PriceCard2 = (props) => {
                        
                         <div className="plan-frame-5">
                             <div className="plan-frame-6">
-                                <img className="check-circle" alt="Check circle" src="check-circle.png"/>
+                                <img className="check-circle" alt="Check circle" src="check_circle.svg"/>
                                 <div className="plan-text-wrapper-2">No of pages</div>
                             </div>
                             <div className="plan-frame-6">
-                                <img className="check-circle" alt="Check circle" src="check-circle.png"/>
+                                <img className="check-circle" alt="Check circle" src="check_circle.svg"/>
                                 <div className="plan-text-wrapper-2">HD Indigo Print</div>
                             </div>
                             <div className="plan-frame-6">
-                                <img className="check-circle" alt="Check circle" src="check-circle.png"/>
+                                <img className="check-circle" alt="Check circle" src="check_circle.svg"/>
                                 <div className="plan-text-wrapper-2">Regular Print</div>
                             </div>
                             <div className="plan-frame-6">
-                                <img className="check-circle" alt="Check circle" src="check-circle.png"/>
+                                <img className="check-circle" alt="Check circle" src="check_circle.svg"/>
                                 <div className="plan-text-wrapper-2">Some Add Ons</div>
                             </div>
                         </div>
