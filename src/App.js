@@ -78,7 +78,7 @@ function LandingRoutes({data={}}) {
             <Route path='/xxyyzz' element={<Success/>} />
 
 
-            <Route path='/chackout' element={<D2COrdersummry/>}/>
+            <Route path='/checkout' element={<D2COrdersummry/>}/>
             
           </Routes>
         <FooterLanding />

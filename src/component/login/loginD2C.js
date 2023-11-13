@@ -230,7 +230,6 @@ useEffect(() => {
                 console.log('user data : ',data)
                 localStorage.setItem('hasReloaded', false);
                 if(localStorage.getItem('continueOrderLink')){
-                  localStorage.setItem('continueOrderLink','')
                   window.location.href = localStorage.getItem('continueOrderLink')
                 }
                 else{
