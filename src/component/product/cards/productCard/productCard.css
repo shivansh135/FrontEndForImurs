@@ -82,8 +82,8 @@
     .product{
         gap:8px;
     }
-    .text-wrap{
-        gap: 18px !important;
+    .product .text-wrap{
+        gap: 18px;
     }
     .product .image{
         width: 133px;

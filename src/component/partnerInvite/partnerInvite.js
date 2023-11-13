@@ -1,7 +1,7 @@
 import React from "react";
 import "./partnerInvite.css";
 import { ColabrationMarquee } from "../marquee/marquee";
-import { ButtonSecondary } from "../button/button";
+import { ButtonPrimary, ButtonSecondary } from "../button/button";
 
 export const PartnerInvite_v0 = () => {
     return (
@@ -31,7 +31,7 @@ export const PartnerInvite = () => {
                 </p>
             </div>
             <ColabrationMarquee/>
-            <ButtonSecondary direction={true} to="/login" text={'Become a partner'}/>
+            <ButtonPrimary direction={true} to="/login" text={'Sign Up as Partner'}/>
         </div>
     );
 };

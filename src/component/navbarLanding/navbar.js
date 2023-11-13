@@ -9,14 +9,17 @@ export const NavbarLanding = () => {
     const [isMenuclosing, setIsMenuClosing] = useState(false); 
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        setTimeout(() => {
+            document.querySelector('.landingMain').addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            document.querySelector('.landingMain').removeEventListener('scroll', handleScroll);
         };
+        }, 200);
+        
     }, []);
 
     const handleScroll = () => {
-        if (window.scrollY > 200) {
+        if (document.querySelector('.landingMain').scrollTop > 200) {
             setScrolling(true);
         } else {
             setScrolling(false);

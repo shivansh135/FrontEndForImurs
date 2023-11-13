@@ -6,6 +6,7 @@ import { SimpleHeading } from '../../../component/headings/heading';
 import { Dashboard } from '../../structure/structure';
 import CustomDropdown from '../form-component/formcomponents';
 import Popup from '../../../component/popup/popup';
+import { ButtonPrimary } from '../../../component/button/button';
 
 
 export function FormGroup(props) {
@@ -111,6 +112,13 @@ function CreateOrder(props) {
 
   const placeorder = async () => {
     try {
+      var cat_id = "";
+      for (let cat of options) {
+        if (cat.split(' - ')[1] == selectedOption) {
+          cat_id = cat.split(' - ')[0];
+          break;
+        }
+      }
       const response = await fetch(process.env.REACT_APP_API_URL +'api/place-order', {
         method: 'POST',
         headers: {
@@ -121,7 +129,7 @@ function CreateOrder(props) {
           partner:props.data._id,
           customerName:formData.name,
           customerPhone:formData.mobile,
-         category:selectedOption.split('-')[0].trim(' ')
+         category:cat_id
         }),
       });
 
@@ -138,10 +146,8 @@ function CreateOrder(props) {
       }
 
       if (response.ok) {
-        // The POST request was successful
-        console.log('Order placed successfully');
-        window.history.go(-1)
-        // You can handle success here, e.g., reset the form
+        localStorage.setItem('refreshPage','true');
+        window.location = '/orders'
       } else {
         console.error('Failed to place the order');
         // Handle the error, e.g., show an error message to the user
@@ -168,22 +174,22 @@ function CreateOrder(props) {
           setShowPopup(false);
         }}
       />
-          <SimpleHeading text = {"Order Details"}/>
+          <SimpleHeading text = {"Create New Order"}/>
           <div className='form' style={{marginTop:"0"}}>
-          <FormGroup sequence="01" label="Customer Name" inputType="text"  name="name" value={formData.name} onChange={handleInputChange} id='name' />
-          <FormGroup sequence="02" label="Customer Phone No." inputType="number"  name="mobile" value={formData.mobile} onChange={handleInputChange} id='name'/>
+          <FormGroup sequence="" label="*Customer Name" inputType="text"  name="name" value={formData.name} onChange={handleInputChange} id='name' />
+          <FormGroup sequence="" label="Customer Phone No." inputType="number"  name="mobile" value={formData.mobile} onChange={handleInputChange} id='name'/>
 
           <CustomDropdown
-          lable="Catigory"
-          sequence={'03'}
+          lable="*Category"
+          sequence=""
         options={options.map(option => option.split(' - ')[1])}
-        selectedValue={selectedOption.split('-')[1]}
+        selectedValue={selectedOption}
         onSelect={handleSelect}
         dropdownStyle={{}}
         optionStyle={{}}
       />
 
-          <div onClick={placeorder} style={{width:'fit-content',cursor:'pointer'}}><ButtonSecondary text="Place Order" /></div>
+          <div onClick={placeorder} style={{width:'100%',cursor:'pointer'}}><ButtonPrimary text="Place Order" /></div>
         </div>
       </Dashboard>
     );

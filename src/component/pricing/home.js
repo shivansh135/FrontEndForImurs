@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
 
-import { InfiniteMarquee } from "../marquee/marquee";
+import { InfiniteMarquee, RegistrationMarquee } from "../marquee/marquee";
 import { FlipbookContainer } from "../flipBookShow/flipBookShow";
 import { VideoBackground } from "../displayVideo/video";
 import { PartnerInvite } from "../partnerInvite/partnerInvite";
@@ -44,7 +44,7 @@ export const Home = () => {
       <VideoBackground />
       <FlipbookContainer source={"Print_DikshaUtkarsh.pdf"} />
       <InfiniteMarquee />
-    
+     
       <div className="cardsspacing">
         {" "}
         <MainHeading name="Imurs' Greatest Hits" />

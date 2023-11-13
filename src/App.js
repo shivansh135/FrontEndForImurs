@@ -10,7 +10,7 @@ import { FooterLanding, PropertyFooterWrapper } from './component/footer/footer'
 import { Otp } from './component/login/login';
 import Form from './component/form/form';
 import { DashboardHome } from './dashboard/home/home';
-import { TopNavigation } from './dashboard/structure/structure';
+import { Dashboard, TopNavigation } from './dashboard/structure/structure';
 import Success from './component/login/success';
 import Profile_Settings from './dashboard/profileSetting/form';
 import { Cancillation, ContactUS, Privacy, TandC } from './component/legal/cancillation';
@@ -24,41 +24,66 @@ import { OrderSample } from './dashboard/new-form/forms/order-sample';
 import CreateOrder from './dashboard/new-form/forms/order-form';
 import CheckOut from './dashboard/checkout/checkout';
 import { TailSpin } from 'react-loader-spinner';
+import { LandingDash } from './component/landingDash/landingDash';
+import { CategoryWindow, D2COrdersummry, PriceD2C, SubCategoryWindow } from './component/pricingD2c/priced2c';
+import { OtpD2C } from './component/login/loginD2C';
+import Profile_SettingsD2C from './component/profileSettingD2C/form';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.querySelector('.landingMain').scrollTo(0, 0);
   }, [pathname]);
 
   return null;
 }
 
-function LandingRoutes() {
+function CheckRelode(){
+  if (localStorage.getItem('refreshPage') == 'true' && window.location.pathname !== '/processPayment') {
+    localStorage.setItem('refreshPage', 'false');
+    window.location.reload();
+  }
+}
+
+function LandingRoutes({data={}}) {
+  console.log(data)
   return (
     <Router>
-      <NavbarLanding />
+      <LandingDash>
       <ScrollToTop/>
-      <div className="pages">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/register" element={<Form />} />
-          <Route path="/price" element={<Price />} />
-          <Route path="/plans" element={<Plan value={''} />} />
-          <Route path="/login" element={<Otp />} />
-          <Route path="/dashboard" element={<Success/>}></Route>
-          <Route path='/registration' element={<Form/>} />
-          <Route path='/privacy' element={<Privacy/>} />
-          <Route path='/refundpolicy' element={<Cancillation/>} />
-          <Route path='/termsandconditions' element={<TandC/>} />
-          <Route path='/contactus' element={<ContactUS/>} />
-   
 
-        </Routes>
-      </div>
-      <FooterLanding />
+        <NavbarLanding />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/register" element={<Form />} />
+            <Route path="/plans" element={<Plan value={''} />} />
+
+            <Route path='/orderD2C' element={<PriceD2C/>}/>
+
+            <Route path='/category' element={data.phone?<CategoryWindow/>:<OtpD2C/>}/>
+            
+            <Route path='/sub_category' element={data.phone?<SubCategoryWindow/>:<OtpD2C/>}/>
+
+            <Route path="/account" element={data.phone?<Profile_SettingsD2C data={data}/>:<OtpD2C />} />
+
+            <Route path="/Partnerlogin" element={<Otp />} />
+            <Route path="/dashboard" element={<Success/>}></Route>
+            <Route path='/registration' element={<Form/>} />
+            <Route path='/privacy' element={<Privacy/>} />
+            <Route path='/refundpolicy' element={<Cancillation/>} />
+            <Route path='/termsandconditions' element={<TandC/>} />
+            <Route path='/contactus' element={<ContactUS/>} />
+            <Route path='/xxyyzz' element={<Success/>} />
+
+
+            <Route path='/chackout' element={<D2COrdersummry/>}/>
+            
+          </Routes>
+        <FooterLanding />
+      </LandingDash>
+      
     </Router>
   );
 }
@@ -94,18 +119,13 @@ function DashboardRoutes(props) {
   console.log(suvenirProducts)
   console.log(portfolioProducts)
 
-  if (localStorage.getItem('refreshPage') == 'true' && window.location.pathname !== '/processPayment') {
-    localStorage.setItem('refreshPage', 'false');
-    window.location.reload();
-  }
   
   
-
 
 
   return (
     <Router>
-      <div className="pages">
+      <CheckRelode/>
         <Routes>
           <Route path="/dashboard" element={<DashboardHome data={props.data} />} />
           <Route path="/" element={<DashboardHome data={props.data} />} />
@@ -118,14 +138,17 @@ function DashboardRoutes(props) {
           <Route path='/sample' element={<OrderSample data={props.data}/>} />
           <Route path='/createOrder' element={<CreateOrder data={props.data}/>} />
           <Route path='/processPayment' element={<CheckOut data={props.data}/>} />
+          <Route path='/privacy' element={<Dashboard data={props.data}><Privacy/></Dashboard>} />
+          <Route path='/refundpolicy' element={<Dashboard data={props.data}><Cancillation/></Dashboard>} />
+          <Route path='/termsandconditions' element={<Dashboard data={props.data}><TandC/></Dashboard>} />
+          <Route path='/contactus' element={<Dashboard data={props.data}><ContactUS/></Dashboard>} />
+          <Route path='/xxyyzz' element={<Success/>} />
         </Routes>
-      </div>
     </Router>
   );
 }
 
 function App() {
-  const [x, setX] = useState(1);
   const [data, setData] = useState(null); // Initialize with null
 
   useEffect(() => {
@@ -148,7 +171,6 @@ function App() {
       .then((data) => {
         if (data) {
           setData(data); // Update the data state
-          setX(data.user === false ? true : false);
         }
       })
       .catch((error) => {
@@ -156,14 +178,13 @@ function App() {
       });
   }, []); // Empty dependency array
 
-  if (x === 1 || data === null) {
-    return (
-      <Success/>
-    );
+  if (data === null) {
+    return <Success />;
   }
-
-  return x ? <LandingRoutes /> : <DashboardRoutes data={data} />;
+  return data.user=='Partner' ? <DashboardRoutes data={data.data} /> : <LandingRoutes data={data.data}/>;
 }
 
-
 export default App;
+
+
+

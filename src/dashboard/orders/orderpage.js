@@ -9,6 +9,7 @@ import Profile_Settings from "../profileSetting/form"
 import { Dashboard } from "../structure/structure"
 
 import React, { useState, useEffect } from 'react';
+import { OrderCardV2 } from "../cards/ordercardv2"
 
 export const OrdersB2B = (props) => {
   const [showAlert, setShowAlert] = useState(false);
@@ -68,21 +69,43 @@ export const OrdersB2B = (props) => {
   function mapStatusToString(status) {
     switch (status) {
         case 0:
-            return "Fill Form";
+            return "In Progress";
         case 1:
         case 2:
-            return "Track Order";
         case 3:
-            return "Review";
         case 4:
         case 5:
-            return "Track Order";
+            return "Active";
         case 6:
-            return "Order Extra Copies";
+            return "Shipped";
         default:
             return "Unknown Status";
     }
 }
+
+function mapStatusimgToString(status) {
+  switch (status) {
+      case 0:
+          return "inprocess";
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+          return "active";
+      case 6:
+          return "shipped";
+      default:
+          return "Unknown Status";
+  }
+}
+
+
+
+
+
+
+
 
 
   return (
@@ -91,7 +114,7 @@ export const OrdersB2B = (props) => {
   {showAlert && <div className="alert">Your Sample Will be Delivered Shortly</div>}
   <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: "20px" }}>
     {orders.map((order) => (
-      <OrderCard key={order._id} order={order} status={mapStatusToString(order.orderStatus)} />
+      < OrderCardV2   key={order._id} order={order} status={mapStatusToString(order.orderStatus)} img={mapStatusimgToString(order.orderStatus)} />
     ))}
   </div>
 </Dashboard>

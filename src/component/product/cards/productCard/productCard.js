@@ -37,27 +37,30 @@ console.log(props.artwork)
 export const ProductDashbord = (props) => {
 
 
-    useEffect(() => {
+   console.log(props.product)
      
-    console.log(props.artwork)
+   
      
-    }, [props.artwork])
+
     
     
     
     
         return (
             <div className="product">
-                <img className="image" alt="Image" src="sample.jfif" />
+                <img className="image" alt="Image" src={`https://drive.google.com/uc?export=view&id=${props.product.thumbnail}&cache-control=max-age=172800`} />
                 <div className="text-wrap">
                     <p className="palak-and-dharmesh">
                         <span className="text-wrapper">
-                            Palak and Dharmesh
+                          {props.product.title}
                             <br />
                         </span>
                         <span className="span">Souvenir Magazine</span>
                     </p>
-                    <ButtonSecondary text="learn more"></ButtonSecondary>
+                    <div className="learn-more">
+                    <div className="div">Learn More</div>
+                    <img className="arrow-outward" alt="Arrow outward" src="arrow_outward.svg" />
+                </div>
                 </div>
             </div>
         );

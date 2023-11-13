@@ -55,6 +55,11 @@
         gap: 40px;
         margin-top: 80px;
     }
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 5px;
+        position: absolute;
+      }
 }
 
 body,html{

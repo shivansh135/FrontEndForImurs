@@ -1,6 +1,6 @@
 import { ButtonBlack } from "../../component/button/button"
 import { FeedbackNew } from "../../component/feedback/courosal/feedback1-cards/card1"
-import { SimpleHeading } from "../../component/headings/heading"
+import { BasicHeading, SimpleHeading } from "../../component/headings/heading"
 import { ProductDashbord } from "../../component/product/cards/productCard/productCard"
 import { OrderCard } from "../cards/orderCard"
 import { ButtonPrimary, ButtonSecondary } from "../dash_buttons/buttons"
@@ -12,15 +12,18 @@ import { CardPortfolio } from "./portfolioCard/card"
 
 export const Portfolio = (props)=>{
     
+    console.log(props)
+
     return(
         <Dashboard data={props.data}>
             <div className="body">
-            <Banner heading="Cherised Daily" style={{backgroundImage:"url('souvenior_banner.jpg')",backgroundPositionY:'0'}} sub_heading="Lighter then albums, heavier in memories." url="portfolio-banner.jpg"/>
+            <BasicHeading text="Portfolio"/>
+            <Banner heading="Portfolio" style={{backgroundImage:"url('/banner/portfolio_banner.JPG')",backgroundPositionY:'0'}} sub_heading="The modern way of showcasing brands" url="/banner/portfolio_banner.jpg"/>
             <div className="card-container">
       {props.portfolio.map((product) => (
         // <CardPortfolio key={product._id} product={product} />
         <div style={{width:'fit-content'}}>
-        <ProductDashbord props={product}/>
+        <ProductDashbord key={product._id} product={product}/>
 
         </div>
       ))}
@@ -33,15 +36,18 @@ export const Portfolio = (props)=>{
 } 
 
 export const Suvinor = (props)=>{
+
+  console.log(props.suvenir)
     
     return(
         <Dashboard data={props.data}>
             <div className="body">
-            <Banner heading="Cherised Daily" style={{backgroundImage:"url('souvenior_banner.jpg')",backgroundPositionY:'0'}} sub_heading="Lighter then albums, heavier in memories." url="souvenior_banner.jpg"/>
+             <BasicHeading text="Souvenirs"/>
+            <Banner heading="Souvenir" style={{backgroundImage:"url('souvenior_banner.JPG')",backgroundPositionY:'0'}} sub_heading="Create a lasting impact on clients’ life" url="/banner/souvenior_banner.jpg"/>
             <div className="card-container">
             {props.suvenir.map((product) => (
         // <CardPortfolio key={product._id} product={product} />
-        <ProductDashbord props={product}/>
+        <ProductDashbord key={product._id} product={product}/>
       ))}
             </div>
             </div>

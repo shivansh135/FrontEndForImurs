@@ -36,15 +36,17 @@
 }
 
 .simple-heading .text-wrapper {
-    color: var(--jet-black);
-    font-family: 'HK Grotesk-MediumLegacy';
-    font-size: 28px;
-    font-weight: 400;
-    left: 0;
-    letter-spacing: 0;
-    position: relative;
-    text-align: left;
-    top: 0;
+   
+
+
+    color: var(--Jet-Black, #333332);
+
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: FreightBig Pro;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .heding-subheding {

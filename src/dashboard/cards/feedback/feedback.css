@@ -4,8 +4,8 @@
     display: inline-flex;
     flex-direction: column;
     gap: 25.2px;
-    justify-content: center;
-    padding: 19.6px 28px;
+    justify-content: start;
+    padding: 25px 25px;
     position: relative;
   }
   
@@ -46,7 +46,7 @@
     flex: 0 0 auto;
     gap: 14px;
     justify-content: center;
-    padding: 0px 63px 0px 0px;
+    padding: 0px 20px 0px 0px;
     position: relative;
   }
   
@@ -71,7 +71,6 @@
     color: #33333266;
     font-family: "HK Grotesk-Medium", Helvetica;
     font-weight: 500;
-    line-height: 28.9px;
   }
   @media screen and (max-width:768px) {
     .dashboard-feed-back {
@@ -80,8 +79,8 @@
         display: inline-flex;
         flex-direction: column;
         gap: 12.2px;
-        justify-content: center;
-        padding: 9px 14px;
+        justify-content: start;
+        padding: 12px 12px;
         position: relative;
       }
       
@@ -121,7 +120,7 @@
         flex: 0 0 auto;
         gap: 14px;
         justify-content: center;
-        padding: 0px 63px 0px 0px;
+        padding: 0px 10px 0px 0px;
         position: relative;
       }
       
@@ -146,6 +145,5 @@
         color: #33333266;
         font-family: "HK Grotesk-Medium", Helvetica;
         font-weight: 500;
-        line-height: 28.9px;
       }
   }

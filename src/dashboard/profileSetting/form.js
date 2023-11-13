@@ -7,7 +7,7 @@ import { Dashboard } from '../structure/structure';
 const FormGroup = (props) => (
   <div className="form-group">
     <div className="lable">
-      <span className="sequence">{props.sequence}</span>
+    {props.sequence!=""?<span className="sequence">{props.sequence}</span>:null}
       {props.label}
     </div>
     {props.inputType !== 'none' && (
@@ -142,7 +142,6 @@ const Profile_Settings = (props) => {
 
   return (
     <Dashboard data={props.data}>
-      <div className="body">
         <div className="form">
           <SimpleHeading text="Profile Settings" />
 
@@ -163,7 +162,7 @@ const Profile_Settings = (props) => {
           <div className="g2">
             <FormGroup
               disabled={!flag}
-              sequence="01"
+              sequence=""
               label="What's your brand name "
               inputType="text"
               name="name"
@@ -173,7 +172,7 @@ const Profile_Settings = (props) => {
             />
             <FormGroup
               disabled={!flag}
-              sequence="02"
+              sequence=""
               label="Zip Code"
               inputType="text"
               name="zip"
@@ -185,7 +184,7 @@ const Profile_Settings = (props) => {
 
           <FormGroup
             disabled={!flag}
-            sequence="03"
+            sequence=""
             label="Address "
             inputType="text"
             name="address"
@@ -197,7 +196,7 @@ const Profile_Settings = (props) => {
           <div className="g2">
             <FormGroup
               disabled={!flag}
-              sequence="04"
+              sequence=""
               label="City "
               inputType="text"
               name="city"
@@ -207,7 +206,7 @@ const Profile_Settings = (props) => {
             />
             <FormGroup
               disabled={!flag}
-              sequence="05"
+              sequence=""
               label="State "
               inputType="text"
               name="State"
@@ -241,7 +240,6 @@ const Profile_Settings = (props) => {
   <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
 </svg>
           </div>
-        </div>
       </div>
     </Dashboard>
   );

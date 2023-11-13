@@ -2,7 +2,7 @@ import React, { useState, useRef ,useEffect} from "react";
 import "./login.css";
 
 import { MainHeading } from "../headings/heading";
-import { ButtonSecondary } from "../button/button";
+import { ButtonPrimary, ButtonSecondary } from "../button/button";
 import pencil from './border_color.svg'
 
 import PhoneInput from 'react-phone-number-input'
@@ -311,7 +311,7 @@ useEffect(() => {
 
 
   return (
-    <div className={`body otp-page ${isBlurred ? 'blur-effect' : ''}`} style={{ marginTop: '100px' }}>
+    <div className={`body otp-page ${isBlurred ? 'blur-effect' : ''}`} style={{ marginTop: '100px',paddingBottom:'450px' }}>
 
       <Popup
         show={showPopup}
@@ -331,7 +331,7 @@ useEffect(() => {
           setShowPopup2(false);
         }}
       />
-       <MainHeading name="Verify Phone Number" />
+       <MainHeading name="Sign in/Sign Up" />
        {flag==0?<div className="input-group">
         <div className="lable">Enter Phone Number</div>
         <PhoneInput
@@ -342,7 +342,7 @@ useEffect(() => {
   onChange={setValue}/>
       </div>:null}
       {flag==0?<div className="bttn" onClick={hide}>
-        <ButtonSecondary text='Get OTP'/>
+        <ButtonPrimary text='Get OTP'/>
       </div>:null}
       {flag===1?
       <div className="input-group">
@@ -368,12 +368,12 @@ useEffect(() => {
       </div>:null
 }
 {flag?<div className="bttn" onClick={verify}>
-        <ButtonSecondary text='Verify' />
+        <ButtonPrimary text='Verify' />
       </div>
       :null
 }
 {flag?  <div className="text-wraper">
-    {seconds===0?<span className="link" onClick={resend}> Resend OTP</span>:<span>Resend OTP in {seconds}s</span>}
+    {seconds===0?<span className="link" onClick={resend} style={{marginTop:"-15px"}}> Resend OTP</span>:<span>Resend OTP in {seconds}s</span>}
       </div>:null}
       <div style={{display:'flex',flexDirection:'column',gap:'30px',width:'100%'}}></div>
     </div>

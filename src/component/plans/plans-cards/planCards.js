@@ -30,7 +30,7 @@ export const PriceCard = (props) => {
         <div className="price-card" style={{background:props.cardColor ,marginTop:(props.text==="Impression")?"0px":"none"}} >
             <div className="head">
                 <div className="title">
-                    <div className="text-wrapper">IMURS {props.text}</div>
+                    <div className="text-wrapper">imurs {props.text}</div>
                 </div>
                 <div className="icon">
                     {props.out==='sun.png'?
@@ -82,7 +82,7 @@ export const PriceCard = (props) => {
             <div className="cont">
                 <div className="text-wrap">
                     <p className="discription">{props.description}</p>
-                    <div className="each-magazine">₹ {props.price}/ each magazine</div>
+                    <div className="each-magazine">₹ {props.price}/ each edition</div>
                     <div className="bullets-cont">
       {bullets.map((bullet, index) => (
         <div className="bullet" key={index}>
@@ -107,7 +107,7 @@ export const PriceCard2 = (props) => {
         <div className="plan-card" style={{backgroundColor:props.cardColor,marginTop:props.flexmargin}}>
             <div className="plan-frame">
                 <div className="plan-div-wrapper">
-                    <div className="plan-text-wrapper" style={{color:props.cardColor}}>IMURS {props.text}</div>
+                    <div className="plan-text-wrapper" style={{color:props.cardColor}}>imurs {props.text}</div>
                 </div>
                 <div className="plan-div">
                     <img className="plan-star" alt="Star" src={props.out} />
@@ -118,7 +118,7 @@ export const PriceCard2 = (props) => {
                 <div className="plan-frame-3">
                     <p className="plan-p">Lorem ipsum dolor sit amet lorem ipsum dolor sit amer jixm</p>
                     <div className="plan-frame-4">
-                        <div className="each-magazine">₹ -&nbsp;&nbsp;/ each magazine</div>
+                        <div className="each-magazine">₹ -&nbsp;&nbsp;/ each edition</div>
                        
                         <div className="plan-frame-5">
                             <div className="plan-frame-6">

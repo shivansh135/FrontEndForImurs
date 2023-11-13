@@ -6,12 +6,14 @@ export const ButtonPrimary = (props) => {
 
 const getstarted=()=>
 {
+
+
   const paymentID = props.plan.id;
   const value = props.value
   const apiUrl = process.env.REACT_APP_API_URL + "api/payment";
-   console.log(value)
-
-  // Create a request object with the payment ID in the request body
+  
+if(props.plan.price!=='-')
+{
   const requestOptions = {
     method: 'POST',
     headers: {
@@ -40,12 +42,13 @@ const getstarted=()=>
     .catch(error => {
       // Handle any errors that occur during the request
       console.error("Error sending payment ID: " + error);
-    });
+    });}
+
   
 }
 
   return (
-    <div className={`button-primary`}  onClick={getstarted}>
+    <div className={`button-primary-price`}  onClick={getstarted}>
       <div className="text-wrapper">GET STARTED</div>
     </div>
   );

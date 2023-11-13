@@ -1,12 +1,13 @@
 import React from "react";
 import "./footer.css"
+import { NavLink } from "react-router-dom";
 export const Footer = () =>[
     <div className="dash-footer">
         <div className="link-cont">
-            <a className="link">Privacy Policy</a>
-            <a className="link">Cancellation & Refund Policy</a>
-            <a className="link">Terms and Conditions</a>
-            <a className="link">Contact Us</a>
+            <NavLink to="/privacy" className="link">Privacy Policy</NavLink>
+            <NavLink to="/refundpolicy" className="link">Cancellation & Refund Policy</NavLink>
+            <NavLink to="/termsandconditions" className="link">Terms and Conditions</NavLink>
+            <NavLink to="/contactus" className="link">Contact Us</NavLink>
         </div>
         <div className="icon-cont">
             <img src="social/insta.svg" alt="insta"/>

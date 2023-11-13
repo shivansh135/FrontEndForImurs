@@ -2,9 +2,20 @@
     background-color: var(--jet-black);
     padding: 15px;
 }
+.marquee-cont1 
+{ background-color: #3c3c3c28;
+  opacity: 60%;
+  padding: 15px;
+ z-index: 11111;
+  
 
-.marquee-cont-icon{
+}
+
+
+
+.marquee-cont-icon {
   padding: 0px;
+ 
 }
 
 
@@ -17,6 +28,20 @@
     justify-content: center;
   }
   
+  .text-wrapper1
+  {
+    
+    color: var(--jet-black) ;
+    font-size: var(--font-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    font-family:'freight-big-pro' ;
+  }
+
   .marquee .text-wrapper {
     color: #f7f5f2;
     font-size: var(--font-m);
@@ -73,8 +98,12 @@
       background-color: var(--jet-black);
       padding: 10px;
   }
+  .marquee-cont1
+  {
+    padding: 10px;
+  }
   
-  .marquee .text-wrapper {
+  .marquee .text-wrapper .text-wrapper1 {
     font-size: 20px;
   }
     .marquee .star {

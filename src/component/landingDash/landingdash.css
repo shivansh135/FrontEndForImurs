@@ -1,0 +1,159 @@
+.landingDash{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: fixed;
+    background-color: var(--isabeline);
+}
+.landingDash .top-navigation{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    z-index: 99999;
+    background-color: var(--isabeline);
+}
+ 
+.landingDash .top-navigation .navTitle {
+    color: var(--jet-black);
+    font-family: 'Raleway', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.landingDash .top-navigation .logo{
+    width: 59px;
+    height: 59px;
+    background: transparent;
+    background-size: 80% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.landingDash .side-navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding:30px 40px;
+    background: rgba(51, 51, 50, 0.03);
+    z-index: 99999999999;
+}
+
+
+.landingDash .side-navigation .headding {
+    color: var(--jet-black);
+    font-family: 'raleway', Helvetica;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    margin-bottom: 35px;
+}
+
+
+.landingDash .side-navigation .button{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--Jet-Black, #333332);
+    font-family: 'HK Grotesk-Light';
+    font-size:16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 8px 24px;
+}
+
+.landingDash .side-navigation .active{
+    background: rgba(51, 51, 50, 0.10);
+}
+
+.landingDash .side-navigation .button:hover{
+    background: rgba(51, 51, 50, 0.05);
+}
+
+.landingDash .landingMain{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .landingDash{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        position: fixed;
+    }
+    .landingDash .side-navigation{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+    .landingDash .top-navigation .navTitle {
+       font-size: 32px;
+    }
+    .landingDash .side-navigation .headding {
+        display: none;
+    }
+    .landingDash .side-navigation .button{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        color: var(--Jet-Black, #333332);
+        font-family: 'HK Grotesk-Light';
+        font-size:10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-wrap: nowrap;
+        cursor: pointer;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .landingDash .side-navigation .button img{
+        width: 20px;
+        height: auto;
+    }
+    .landingDash .side-navigation .active{
+        background: transparent;
+        color: var(--Persian-Red, #B73E33);
+    }
+    .landingDash .top-navigation .logo{
+        width: 36px;
+        height: 36px;
+        background-size: 80% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    }
+    
+}

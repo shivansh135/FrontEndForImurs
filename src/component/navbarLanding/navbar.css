@@ -9,6 +9,7 @@
     width: 100%;
     background-color: transparent;
     transition: 0.5s;
+    display: none;
 }
 
 .nav .menu {
@@ -170,6 +171,7 @@ a{
 
   @media screen and (max-width: 768px) {
     .nav {
+        display: flex;
         flex-direction: row-reverse;
     }
     .nav .navTitle {

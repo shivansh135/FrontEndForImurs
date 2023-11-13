@@ -76,9 +76,18 @@
 
 @media screen and (max-width: 550px)
 {
+    .corporate{
+        gap: 15px;
+    }
     .corporate-wrapper
     {
         font-size: 36px !important;
+    }
+    .corporate .corporate-wrapper-2 {
+        font-size: 14px;
+    }
+    .corporate .bundle{
+        font-size: 12px;
     }
     .corporate-div
     {

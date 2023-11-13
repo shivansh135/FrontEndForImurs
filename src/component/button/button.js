@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 
 export const ButtonSecondary = ({ className, customStyle, text, direction, to }) => {
   return (
-    <NavLink to={direction ? to : ''} className={`button-secondary ${className}`} style={customStyle}>
-      <div className="text-wrapper">{text || "order now"}</div>
+    <NavLink to={direction ? to : ''} className={`button-secondary ${className}`}>
+      <div className="text-wrapper" >{text || "order now"}</div>
     </NavLink>
   );
 };
@@ -19,6 +19,13 @@ export const ButtonPrimary = ({ className, customStyle, text, direction, to }) =
   );
 };
 
+export const ButtonPrimarySmall = ({text}) => {
+  return (
+      <div className="button-primary-small">
+          <div className="text-wrapper">{text}</div>
+      </div>
+  );
+}
 
 
 ButtonSecondary.propTypes = {

@@ -4,8 +4,25 @@
     flex-direction: column;
     gap: 2px;
     position: relative;
+    width: 100%;
 }
-
+.op
+{
+    gap:'400px' !important;
+}
+.kami
+{
+    color: var(--isabeline);
+    font-family: 'Raleway', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    align-items: center;
+}
 .dashboard-body .tag1 .text-wrapper {
     color: var(--jet-black);
     font-family: "HK Grotesk-Reguler", Helvetica;
@@ -73,5 +90,8 @@
     .dashboard-body .tag-credit .heading {
         font-size: 18px;
     }
-    
+    .op
+    {
+        gap:'100px' !important;
+    }
 }

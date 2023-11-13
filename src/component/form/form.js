@@ -1,11 +1,11 @@
 import React ,{useState,useEffect}from 'react';
 import './form.css'
 import { BasicHeading, MainHeading } from '../headings/heading';
-import { ButtonPrimary } from '../button1/button1';
-import { ButtonSecondary } from '../button/button';
+import { ButtonPrimary, ButtonSecondary } from '../button/button';
 import { useNavigate } from 'react-router-dom';
 import { Banner } from '../../dashboard/home/home';
-import { ColabrationMarquee } from '../marquee/marquee';
+import { ColabrationMarquee, InfiniteMarquee, RegistrationMarquee } from '../marquee/marquee';
+import { ContactPhone } from '../contactus/contact';
 
 
 function FormGroup(props) {
@@ -181,7 +181,7 @@ function Form() {
         console.error('Error:', error);
       });}
       else{
-        alert('kya kar raha h bhai')
+        alert('Please Fill in all the fields')
       }
   };
   
@@ -189,17 +189,30 @@ function Form() {
 
   console.log(names)
 
+  const [logoText, setLogoText] = useState('Upload Logo');
+
+  const handleFileChange = (event) => {
+    const fileInput = event.target;
+    
+    if (fileInput.files.length > 0) {
+      // User selected a file, update the text
+      setLogoText('Edit Logo');
+    } else {
+      // User cleared the selection, reset the text
+      setLogoText('Upload Logo');
+    }
+  }
 
     return (
       <div className={`body ${isBlurred ? 'blur-effect' : ''}`}>
-        <Banner heading="Become a Partner" sub_heading="Adopt light, chic magazines for daily nostalgia"/>
+        <Banner heading="Become a Partner" sub_heading="Adopt light, chic magazines for daily nostalgia" url="/banner/banner_4.jpg" style={{backgroundSize:'110% auto'}}/>
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',width:'80%',margin:'auto'}}>
           <BasicHeading text = {"Sign Up"}/>
           <label for="logo" className='logo-text'>
             <img src='/uplode.svg' style={{height:'100%',width:'auto'}}/>
-           Upload Logo
+           <span id='logoStatus'>{logoText}</span>
           </label>
-          <input type='file' id="logo" hidden/>
+          <input type='file' id="logo" hidden onChange={handleFileChange}/>
 
         </div> 
         <div className='form'>
@@ -220,7 +233,14 @@ function Form() {
       />
         <div onClick={register}><ButtonPrimary style={{width:'100%'}} text="Register" /></div>
       </div>
-       <ColabrationMarquee/>
+<div style={{display:'flex',flexDirection:'column',gap:window.innerWidth <= 768 ?'20px':'40px'}}>
+<ColabrationMarquee></ColabrationMarquee>
+      <RegistrationMarquee></RegistrationMarquee>
+       
+</div>
+
+<ContactPhone/>
+     
 
       </div>
       

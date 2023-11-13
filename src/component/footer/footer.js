@@ -39,8 +39,8 @@ export const FooterLanding = () => {
             </div>
             <div className="social-media">
                 <a href="https://instagram.com/iamyourstory.in?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img src="social/insta_w.svg" alt="insta"/></a>
-                <img src="social/fb_w.svg" alt="fb"/>
-                <img src="social/twitter_w.svg" alt="tweet"/>
+                <a href="https://instagram.com/iamyourstory.in?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img src="social/fb_w.svg" alt="fb"/></a>
+                <a href="https://instagram.com/iamyourstory.in?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img src="social/twitter_w.svg" alt="tweet"/></a>
                 <a href="https://www.linkedin.com/company/imurs/"><img src="social/linkdin_w.svg" alt="tweet"/></a>
             </div>
             <div className="cont">

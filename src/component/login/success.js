@@ -15,8 +15,8 @@ export default function Success() {
   }, []);
 
   return (
-    <div className='body' style={{justifyContent:'center',alignItems:'center'}}>
-        <HedingSubheding heading="ImUrs" sub_heading="Renovation home with memories"/>
+    <div className='body' style={{justifyContent:'center',alignItems:'center',marginTop:'300px',paddingBottom:'300px'}}>
+        
 <TailSpin
   height="80"
   width="80"
@@ -24,7 +24,7 @@ export default function Success() {
   ariaLabel="tail-spin-loading"
   radius="1"
   wrapperStyle={{
-    backgroundImage: 'url(magazine.svg)',
+    backgroundImage: 'url(/magazine.svg)',
     backgroundSize:'50%',
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"

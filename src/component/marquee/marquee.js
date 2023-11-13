@@ -82,6 +82,12 @@ export const InfiniteMarquee = () => (
   
 );
 
+
+
+
+
+
+
 export const InfiniteIconMarquee = (props) => {
   const info = props.info;
   const infoTexts = [];
@@ -137,3 +143,88 @@ export const InfiniteIconMarquee = (props) => {
       </Marquee>
     );
   };
+
+  export const RegistrationMarquee = ()=>
+{
+return(
+  <Marquee className="marquee-cont1" direction="right">
+    <div className="marquee">
+      <div className="text-wrapper1">Beyond Images</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Stronger brand value</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Blend with memories</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Home Decor</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Beyond Images</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Stronger brand value</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Blend with memories</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Home Decor</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div> <div className="marquee">
+      <div className="text-wrapper1">Beyond Images</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Stronger brand value</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Blend with memories</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Home Decor</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div> <div className="marquee">
+      <div className="text-wrapper1">Beyond Images</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Stronger brand value</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Blend with memories</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Home Decor</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div> <div className="marquee">
+      <div className="text-wrapper1">Beyond Images</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Stronger brand value</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Blend with memories</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+    <div className="marquee">
+      <div className="text-wrapper1">Home Decor</div>
+      <img className="star" style={{filter:'brightness(0%'}}  alt="Star" src="Marquee-Star.svg" />
+    </div>
+  </Marquee>)
+
+};

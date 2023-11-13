@@ -7,7 +7,7 @@ import { ButtonSecondary } from "../dash_buttons/buttons";
 
 
 export const OrderCard = (props) => {
-    
+    console.log(props)
 
 
 

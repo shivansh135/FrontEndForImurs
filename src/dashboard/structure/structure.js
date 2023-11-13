@@ -11,7 +11,7 @@ export const TopNavigation = (props) => {
       <NavLink exact to='/profile'
        className='logo' 
        style={{
-        backgroundImage:(props.data.logo)?`url('https://drive.google.com/thumbnail?export=view&id=${props.data.logo}&cache-control=max-age=172800')`:"url('user.png')",
+        backgroundImage:(props.data.logo)?`url('https://drive.google.com/thumbnail?export=view&id=${props.data.logo}&cache-control=max-age=172800')`:"url('user.svg')",
         backgroundSize:'80%',
         backgroundPosition:'center'
         }}>
@@ -23,7 +23,7 @@ export const TopNavigation = (props) => {
 export const SideNavigation = () => {
     return (
       <div className="side-navigation">
-        <div className="headding">IMURS</div>
+        <div className="headding">imurs</div>
         <NavLink exact to='/' className='button'>
           <img alt='logo' src='logos/grid-view.svg'/>
           <span className='text'>Dashboard</span>

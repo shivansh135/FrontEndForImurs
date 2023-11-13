@@ -18,6 +18,18 @@
     z-index: 99999;
     background-color: var(--isabeline);
 }
+ 
+.dashboard-body .top-navigation .navTitle {
+    color: var(--jet-black);
+    font-family: 'Raleway', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
 
 .dashboard-body .top-navigation .logo{
     width: 59px;
@@ -40,10 +52,10 @@
 
 .dashboard-body .side-navigation .headding {
     color: var(--jet-black);
-    font-family: 'Playfair Display SC', Helvetica;
+    font-family: 'raleway', Helvetica;
     font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 0;
+    font-weight: 400;
+    letter-spacing: -3px;
     line-height: normal;
     margin-top: -1px;
     position: relative;
@@ -85,7 +97,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;    
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -106,6 +118,9 @@
         justify-content: center;
         width: 100%;
         padding: 5px;
+    }
+    .dashboard-body .top-navigation .navTitle {
+       font-size: 32px;
     }
     .dashboard-body .side-navigation .headding {
         display: none;

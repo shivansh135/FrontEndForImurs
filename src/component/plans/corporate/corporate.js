@@ -3,7 +3,7 @@ import "./corporate.css";
 
 export const Corporate = (props) => {
   const [bundlesData, setBundlesData] = useState([]);
-  const [selectedMagazine, setSelectedMagazine] = useState("Select the No Magazine");
+  const [selectedMagazine, setSelectedMagazine] = useState("Select the number of editions");
 
   useEffect(() => {
     // Set props.bundles in the bundlesData state
@@ -38,7 +38,7 @@ export const Corporate = (props) => {
           ))}
         </ul>
       </div>
-      <p className="bundle" style={{display:selectedMagazine==='Select the No Magazine'?"block":'none'}}>( Select a Bundle to view pricing )</p>
+      <p className="bundle" style={{display:selectedMagazine==='Select the number of editions'?"block":'none'}}>( Select a Bundle to view pricing )</p>
     </div>
   );
 };

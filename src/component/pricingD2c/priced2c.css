@@ -1,0 +1,296 @@
+.priceD2C-cont{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-cont{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.order-summry{
+    width: 100%;
+    padding: 50px;
+}
+
+.order-summry .cont{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    gap: 30px;
+}
+
+.order-summry .cont img{
+    width: auto;
+    height: 175px;
+}
+
+.order-summry .cont .text-wrap{
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    font-family: 'HK Grotesk-RegularLegacy';
+}
+
+.order-summry .cont .text-wrap .heading{
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.order-summry .cont .text-wrap .sub-heading{
+    opacity: 0.6;
+}
+
+.order-summry .bill{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 16px;
+}
+
+.order-summry .bill .cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summry .bill .cont .svg-text{
+    display: flex;
+    gap:10px;
+}
+
+.order-summry .bill .cont .svg-text .svg{
+height: 28px;
+width: 28px;
+}
+.order-summry .bill .cont .svg-text .text{
+    font-size: 22px;
+    font-family: 'HK Grotesk-RegularLegacy';
+}
+
+.order-summry .outline{
+    border:  1px solid black;
+}
+
+.order-summry .bill .cont .price{
+    font-family: 'HK Grotesk-RegularLegacy';
+    font-weight: 600;
+    font-size: 22px;
+}
+.order-summry .bill .total{
+    border-top: 1px solid black;
+
+    text-align: right;
+
+}
+.order-summry .radio-checkout {
+    align-items: flex-start;
+    background-color: #efefef;
+    display: flex;
+    gap: 18px;
+    padding: 50px 40px;
+    position: relative;
+    width: 100%;
+  }
+  
+ .order-summry .radio-checkout .button {
+    height: 26px;
+    position: relative;
+    flex-shrink: 0;
+    width: 26px;
+    border: 1px solid black;
+    border-radius: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .order-summry .radio-checkout .button .fill {
+    height: 70%;
+    width: 70%;
+    background-color: black;
+    border-radius: 360px;
+  }
+  
+ .order-summry .radio-checkout .text-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 6px;
+    position: relative;
+  }
+  
+ .order-summry .radio-checkout .heading {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -15.5px;
+    margin-top: -1px;
+    position: relative;
+    width: 269px;
+  }
+  
+.order-summry  .radio-checkout .sub-heading {
+    align-self: stretch;
+    color: var(--jet-black);
+    font-family: "HK Grotesk-Regular", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24.6px;
+    opacity: 0.7;
+    position: relative;
+  }
+  @media screen and (max-width:768px) {
+    .order-summry{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .category-cont{
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 15px;
+    }
+    
+    .order-summry .cont{
+        width: 100%;
+        display: flex;
+        align-items: end;
+        gap: 20px;
+    }
+    
+    .order-summry .cont img{
+        width: auto;
+        height: 95px;
+    }
+    
+    .order-summry .cont .text-wrap{
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-family: 'HK Grotesk-RegularLegacy';
+    }
+    
+    .order-summry .cont .text-wrap .heading{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .order-summry .cont .text-wrap .sub-heading{
+        opacity: 0.6;
+    }
+    
+    .order-summry .bill{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-bottom: 8px;
+    }
+    
+    .order-summry .bill .cont{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .order-summry .bill .cont .svg-text{
+        display: flex;
+        gap:4px;
+    }
+    
+    .order-summry .bill .cont .svg-text .svg{
+    height: 18px;
+    width: 18px;
+    }
+    .order-summry .bill .cont .svg-text .text{
+        font-size: 12px;
+        font-family: 'HK Grotesk-RegularLegacy';
+    }
+    
+    .order-summry .bill .cont .price{
+        font-family: 'HK Grotesk-RegularLegacy';
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .order-summry .bill .total{
+        border-top: 1px solid black;
+    
+        text-align: right;
+    
+    }
+    .order-summry .radio-checkout {
+        align-items: flex-start;
+        background-color: #efefef;
+        display: flex;
+        gap: 10px;
+        padding: 30px 20px;
+        position: relative;
+        width: 100%;
+      }
+      
+     .order-summry .radio-checkout .button {
+        height: 16px;
+        position: relative;
+        flex-shrink: 0;
+        width: 16px;
+        border: 1px solid black;
+        border-radius: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+     .order-summry .radio-checkout .button .fill {
+        height: 70%;
+        width: 70%;
+        background-color: black;
+        border-radius: 360px;
+      }
+      
+     .order-summry .radio-checkout .text-wrap {
+        align-items: flex-start;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 2px;
+        position: relative;
+      }
+      
+     .order-summry .radio-checkout .heading {
+        color: var(--jet-black);
+        font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-right: -15.5px;
+        margin-top: -1px;
+        position: relative;
+        width: 269px;
+      }
+      
+    .order-summry  .radio-checkout .sub-heading {
+        align-self: stretch;
+        color: var(--jet-black);
+        font-family: "HK Grotesk-Regular", Helvetica;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 24.6px;
+        opacity: 0.7;
+        position: relative;
+      }
+      
+  }

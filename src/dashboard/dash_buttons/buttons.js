@@ -16,3 +16,11 @@ export const ButtonPrimary = ({text}) => {
         </div>
     );
 };
+
+export const ButtonPrimarySmall = ({text}) => {
+    return (
+        <div className="button-primary-small">
+            <div className="text-wrapper">{text}</div>
+        </div>
+    );
+}

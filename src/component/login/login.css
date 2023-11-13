@@ -22,7 +22,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    text-align: center;
+    text-align: left;
 }
 .otp-page .PhoneInputInput {
     width: 350px !important;
@@ -30,10 +30,13 @@
     height: 64px !important;
     overflow: hidden !important;
     outline: none !important;
+    background: transparent;
+    border-radius: 0px;
 }
 .otp-page .bttn{
-    width: fit-content;
+    width: 80%;
     margin: auto;
+    max-width: 325px;
     margin-top: -60px;
 }
 
@@ -90,15 +93,16 @@ input[type=number] {
 
 .otp-page .text-wraper .link{
     text-decoration: underline;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .link .pencil{
     width: 20px;
     height: auto;
+
 }
 @media screen and (max-width: 768px) {
     .otp-page .PhoneInputInput {
-        width: 270px !important;
+        width: 212px !important;
         border: 1px solid var(--Jet-Black, #333332) !important;
         height: 44px !important;
         overflow: hidden !important;
@@ -144,9 +148,10 @@ input[type=number] {
         line-height: normal;
     }
     .otp-page .bttn{
-        width: fit-content;
+
         margin: auto;
         margin-top: -10px;
+        max-width: 272px;
     }
     .link .pencil{
         width: 10px;

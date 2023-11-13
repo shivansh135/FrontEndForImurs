@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, redirect, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ProgressBar } from 'react-loader-spinner';
-import { HedingSubheding } from '../../component/headings/heading';
+import { HedingSubheding, MainHeading } from '../../component/headings/heading';
 import './checkout.css';
 import { ButtonSecondary } from '../dash_buttons/buttons';
 import { Dashboard } from '../structure/structure';
@@ -11,9 +11,10 @@ function CheckOut(props) {
   const searchParams = new URLSearchParams(location.search);
   const MID = searchParams.get("MID");
   const [showInvoice, setShowInvoice] = useState(false);
+  const [error, setError] = useState(null);
   const [invoiceData, setInvoiceData] = useState({});
+  
   useEffect(() => {
-    // Make a POST request here and send MID as data
     const fetchData = async () => {
       try {
         const response = await fetch(process.env.REACT_APP_API_URL + 'api/confPayment', {
@@ -26,22 +27,19 @@ function CheckOut(props) {
         });
 
         if (response.ok) {
-          // Request was successful
-          // You can handle the response here
           const data = await response.json();
-          console.log('Response:', data);
 
-          // If the response status is 200, set showInvoice to true
           if (response.status === 200) {
             setShowInvoice(true);
-            setInvoiceData(data)
-            localStorage.setItem('refreshPage','true')
+            setInvoiceData(data);
+            localStorage.setItem('refreshPage', 'true');
           }
         } else {
-          // Handle errors here
-          console.error('Request failed');
+          setError('Failed to process payment. Please try again later.');
+          console.error('Request failed', response);
         }
       } catch (error) {
+        setError('An error occurred while processing the payment. Please try again later.');
         console.error('Error:', error);
       }
     };
@@ -51,29 +49,40 @@ function CheckOut(props) {
 
   return (
     <>
-    {showInvoice ? (
-        <B2Binvoice data={props.data} invoiceData={invoiceData} />
+      {error ? (
+        <ErrorComponent message={error} />
       ) : (
-        <div className='body' style={{ justifyContent: 'center', paddingTop: '30%', alignItems: 'center' }}>
-          <HedingSubheding heading="Processing" sub_heading="Processing Your payment, please wait!" />
-          <ProgressBar
-            height="80"
-            width="80"
-            ariaLabel="progress-bar-loading"
-            wrapperStyle={{}}
-            wrapperClass="progress-bar-wrapper"
-            borderColor='var(--jet-black)'
-            barColor='var(--newpersian-red)'
-          />
-          <HedingSubheding heading="" sub_heading="" />
-          <HedingSubheding heading="" sub_heading="Please Don't Leave: you will automatically get redirected to the invoice" />
-        </div>
+        showInvoice ? (
+          <B2Binvoice data={props.data} invoiceData={invoiceData} />
+        ) : (
+          <div className='body' style={{ justifyContent: 'center', paddingTop: '30%', alignItems: 'center' }}>
+            <HedingSubheding heading="Processing" sub_heading="Processing Your payment, please wait!" />
+            <ProgressBar
+              height="80"
+              width="80"
+              ariaLabel="progress-bar-loading"
+              wrapperStyle={{}}
+              wrapperClass="progress-bar-wrapper"
+              borderColor='var(--jet-black)'
+              barColor='var(--newpersian-red)'
+            />
+            <HedingSubheding heading="" sub_heading="" />
+            <HedingSubheding heading="" sub_heading="Please Don't Leave: you will automatically get redirected to the invoice" />
+          </div>
+        )
       )}
     </>
-      
-   
   );
 }
+
+const ErrorComponent = ({ message }) => (
+  <div className='error-container'>
+    <p className='error-message'>{message}</p>
+  </div>
+);
+
+// ... rest of your components remain the same
+
 
 export const B2Binvoice = ({ data, invoiceData }) => {
   const redirected = invoiceData.redirectTo
@@ -101,11 +110,9 @@ export const B2Binvoice = ({ data, invoiceData }) => {
           <div className="date">{dateConvert(invoiceData.date)}</div>
         </div>
         <div className="teact-wrap">
-          <div className="heading">Hello {invoiceData.name},</div>
+          <div className="heading">Thanks, {invoiceData.name}!</div>
           <p className="text">
-            <span className="text-wrapper">Your order has been confirmed. Please forward to fill </span>
-            <br></br>
-            <span className="span">Abstract form</span>
+            <span className="text-wrapper">Your iCredits has been added to your wallet.</span>
           </p>
         </div>
         
@@ -115,7 +122,7 @@ export const B2Binvoice = ({ data, invoiceData }) => {
             {invoiceData.items.map((item, index) => (
             <div className='item'>
               <div className="div">
-                <div className="heading-2">{capitalizeWords(item.name)}</div>
+                <div className="heading-2">{(item.name)}</div>
                 <p className="sub-heading">{item.sub_headin}</p>
               </div>
               <div className="price">₹{item.price}</div>
@@ -125,7 +132,7 @@ export const B2Binvoice = ({ data, invoiceData }) => {
           </div>
 
         <div className="final-price">
-          ₹{invoiceData.items.reduce((total, item) => total + item.price, 0)}
+          ₹{invoiceData.items.reduce((total, item) => parseInt(total) + parseInt(item.price), 0)}
         </div>
         <NavLink to={redirected}>
         <ButtonSecondary text="GO TO ORDERS" />

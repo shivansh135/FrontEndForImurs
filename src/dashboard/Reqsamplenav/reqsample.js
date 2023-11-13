@@ -17,7 +17,7 @@ export  function Reqsample() {
 export  function CreateOrder(props)
 {
   return(  <div style={{display:'flex',justifyContent:'space-between'}}>
-   <NavLink to='/createOrder'> <ButtonSecondary text='creare order'/></NavLink>
+   <NavLink to='/createOrder'> <ButtonSecondary text='create order'/></NavLink>
  
   <TagCredit data={props.data}/>
   </div>)

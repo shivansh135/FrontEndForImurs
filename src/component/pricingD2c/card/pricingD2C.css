@@ -1,0 +1,562 @@
+.pricing-card-new-d2c {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: var(--jet-black);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    position: relative;
+    color: var(--jet-black);
+    max-width: 430px;
+  }
+  
+  .pricing-card-new-d2c .datails {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .pricing-card-new-d2c .name-cont {
+    align-items: center;
+    align-self: stretch;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #000000;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 0px 0px 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .pricing-card-new-d2c .name {
+    color: inherit;
+    font-family: freight-big-pro, Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .pricing-card-new-d2c .svg-text {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 6px;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .pricing-card-new-d2c .svg {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .pricing-card-new-d2c .svg-text .text {
+    color: inherit;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .pricing-card-new-d2c .bullets {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 8px 11px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .pricing-card-new-d2c .pricing {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .pricing-card-new-d2c .price {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .pricing-card-new-d2c .value {
+    color: inherit;
+    font-family: "HK Grotesk-BoldLegacy", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .pricing-card-new-d2c .actual-value {
+    color: inherit;
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    text-decoration: line-through;
+    width: fit-content;
+  }
+  
+  .pricing-card-new-d2c .heading {
+    color: inherit;
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .pricing-card-new-d2c .sub-heading {
+    color: inherit;
+    opacity: 0.6;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+/*Catigory card*/
+
+
+.category-card-stroke {
+  align-items: flex-start;
+    background-color: var(--isabeline);
+    border: 0.25px solid;
+    border-color: #000000;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 28px;
+    position: relative;
+   gap: 12px;
+   padding: 25px 50px;
+   width: 100%;
+
+}
+
+.category-card-stroke .mag-svg {
+ height: 60px;
+ width: 60px;
+ position: relative;
+}
+
+.category-card-stroke .mag-name {
+  align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.category-card-stroke .text-wrapper {
+  color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  font-size: 28px;
+}
+
+.category-card-stroke .div {
+  color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  font-size: 16px;
+}
+
+/*Super catigory*/
+
+.super-category {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+
+.super-category .icon-category-name {
+  align-items: center;
+  align-self: stretch;
+  border-bottom-style: solid;
+  border-bottom-width: 0.25px;
+  border-color: #333332;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 18px;
+  padding: 0px 0px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.super-category .svg {
+  height: 58px;
+  position: relative;
+  width: 58px;
+}
+
+.super-category .text-wrapper {
+  color: var(--jet-black);
+  font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.super-category .div {
+  color: #33333299;
+  font-family: "HK Grotesk-RegularLegacy", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+/*Sub-category*/
+
+.sub-category-card {
+  align-items: center;
+  border: 0.25px solid;
+  border-color: #333332;
+  display: flex;
+  gap: 12px;
+  padding: 28px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.sub-category-card .celebration {
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.sub-category-card .category-sub-text {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-category-card .text-wrapper {
+  align-self: stretch;
+  color: var(--jet-black);
+  font-family: "HK Grotesk-MediumLegacy", Helvetica;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+}
+
+.sub-category-card .div {
+  align-self: stretch;
+  color: var(--jet-black);
+  font-family: "HK Grotesk-RegularLegacy", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.5;
+  position: relative;
+}
+
+
+
+  @media screen and (max-width: 768px) {
+    .pricing-card-new-d2c {
+      gap:20px;
+      padding: 20px;
+    }
+    
+    .pricing-card-new-d2c .datails {
+      gap: 8px;
+    }
+    
+    .pricing-card-new-d2c .name-cont {
+      padding: 0px 0px 8px; 
+    }
+    
+    .pricing-card-new-d2c .name {
+      font-size: 22px;
+    }
+    
+    .pricing-card-new-d2c .svg-text {
+      gap: 4px;
+    }
+    
+    .pricing-card-new-d2c .svg {
+      height: 18px;
+      width: 18px;
+    }
+    
+    .pricing-card-new-d2c .svg-text .text {
+      font-size: 12px;
+    }
+    
+    .pricing-card-new-d2c .bullets {
+      gap: 8px;
+    }
+    
+    .pricing-card-new-d2c .pricing {
+     gap: 2px; 
+    }
+    
+    .pricing-card-new-d2c .price {
+      gap: 8px;
+    }
+    
+    .pricing-card-new-d2c .value {
+      font-size: 24px;
+    }
+    
+    .pricing-card-new-d2c .actual-value {
+     font-size: 12px; 
+    }
+    
+    .pricing-card-new-d2c .heading {
+      font-size: 18px;
+    }
+    
+    .pricing-card-new-d2c .sub-heading {
+     font-size: 12px; 
+    }
+
+  /*Category card*/
+  .category-card-stroke {
+    align-items: flex-start;
+    background-color: var(--isabeline);
+    border: 0.25px solid;
+    border-color: #000000;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 28px;
+    position: relative;
+  }
+  
+  .category-card-stroke .mag-svg {
+    height: 20px;
+    position: relative;
+    width: 20px;
+  }
+  
+  .category-card-stroke .mag-name {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .category-card-stroke .text-wrapper {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .category-card-stroke .div {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  /*super catigory*/
+
+  .super-category {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .super-category .icon-category-name {
+    align-items: center;
+    align-self: stretch;
+    border-bottom-style: solid;
+    border-bottom-width: 0.25px;
+    border-color: #333332;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 0px 0px 5px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .super-category .svg {
+    height: 28px;
+    position: relative;
+    width: 28px;
+  }
+  
+  .super-category .text-wrapper {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .super-category .div {
+    color: #33333299;
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  /*Sub-category*/
+
+.sub-category-card {
+  align-items: center;
+  border: 0.25px solid;
+  border-color: #333332;
+  display: flex;
+  gap: 10px;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.sub-category-card .celebration {
+  height: 23px;
+  position: relative;
+  width: 23px;
+}
+
+.sub-category-card .category-sub-text {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5px;
+  justify-content: center;
+  position: relative;
+}
+
+.sub-category-card .text-wrapper {
+  align-self: stretch;
+  color: var(--jet-black);
+  font-family: "HK Grotesk-MediumLegacy", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+}
+
+.sub-category-card .div {
+  align-self: stretch;
+  color: var(--jet-black);
+  font-family: "HK Grotesk-RegularLegacy", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.5;
+  position: relative;
+}
+
+  
+    
+  }
