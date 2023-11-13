@@ -22,9 +22,7 @@ export const OtpD2C = () => {
   const [Value, setValue] = useState('');
   const [seconds, setSeconds] = useState(60);
   const [Verify,setVerify] = useState(0);
-  const local = window.location.href
-  console.log(local)
-
+  const navigate = useNavigate();
   const startTimer = () => {
     if (seconds > 0) {
       setSeconds(seconds - 1);
@@ -93,7 +91,7 @@ const handleBackspace = (index, event) => {
   
 
 const hide = () => {
-
+  
   if (Value > 0) {
     if (isValidPhoneNumber(Value)) {
       // If the phone number is valid, set the 'flag' state to 1
@@ -231,7 +229,13 @@ useEffect(() => {
   
                 console.log('user data : ',data)
                 localStorage.setItem('hasReloaded', false);
-                window.location.reload()
+                if(localStorage.getItem('continueOrderLink')){
+                  localStorage.setItem('continueOrderLink','')
+                  window.location.href = localStorage.getItem('continueOrderLink')
+                }
+                else{
+                  window.location = "/"
+                }
               
              setSeconds(60);
            
@@ -339,7 +343,7 @@ useEffect(() => {
   value={Value}
   onChange={setValue}/>
       </div>:null}
-      {flag==0?<div className="bttn" onClick={hide}>
+      {flag==0?<div className="bttn" onClick={()=>{hide()}}>
         <ButtonPrimary text='Get OTP'/>
       </div>:null}
       {flag===1?

@@ -18,7 +18,7 @@ export const Home = () => {
   const [info, setInfo] = useState(null);
 
   useEffect(() => {
-    fetch("https://apis.iamyourstory.in/api/product")
+    fetch(process.env.REACT_APP_API_URL + "api/product")
       .then((response) => response.json())
       .then((data) => {
         // Store the fetched data in the 'info' state variable

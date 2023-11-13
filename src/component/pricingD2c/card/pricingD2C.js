@@ -42,7 +42,7 @@ export const PricingCardNewD2C = () => {
 export const CategoryCard = ({categoryName})=>{
 return(
   <div className="category-card-stroke" >
-      <img className="mag-svg" alt="Mag svg" src='hee.svg' />
+      <img className="mag-svg" alt="Mag svg" src={`category_logo/${categoryName}.svg`} />
       <div className="mag-name">
         <div className="text-wrapper">{categoryName}</div>
         <div className="div">MAGAZINE</div>
@@ -66,7 +66,7 @@ export const SuperCategory = ()=>{
 export const SubCategory = ()=>{
   return(
     <div className='sub-category-card'>
-      <img className="celebration" alt="Celebration" src='celebration' />
+      <img className="celebration" alt="Celebration" src='/magazineBlack.svg' />
       <div className='category-sub-text'>
         <p className="text-wrapper">Based on your memories of both</p>
         <p className="div">A birthday magazine based on your memories with the birthday boy.</p>

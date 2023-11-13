@@ -4,24 +4,35 @@ import { CategoryCard, PricingCardNewD2C, SubCategory, SuperCategory } from "./c
 import "./priced2c.css"
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom"
 
-export const PriceD2C = ()=>{
-    return(
-        <div className="body">
-            <MainHeading name="Select Your Edition"/>
-            <div className="priceD2C-cont">
-              <NavLink to="/category?plan=1234567">
-                <PricingCardNewD2C/>
-              </NavLink>
-              <NavLink to="/category?plan=12345678">
-                <PricingCardNewD2C/>
-              </NavLink>
-              <NavLink to="/category?plan=12345789">
-                <PricingCardNewD2C/>
-              </NavLink>
-            </div>
+export const PriceD2C = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (planId) => {
+    // Perform any additional logic if needed
+    // For example, you can save planId to state or perform other actions
+
+    // Navigate to the desired route
+    localStorage.setItem('continueOrderLink',`/category?plan=${planId}`)
+    navigate(`/category?plan=${planId}`);
+  };
+
+  return (
+    <div className="body">
+      <MainHeading name="Select Your Edition" />
+      <div className="priceD2C-cont">
+        <div onClick={() => handleCardClick('1234567')}>
+          <PricingCardNewD2C />
         </div>
-    )
-}
+        <div onClick={() => handleCardClick('12345678')}>
+          <PricingCardNewD2C />
+        </div>
+        <div onClick={() => handleCardClick('12345789')}>
+          <PricingCardNewD2C />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 
@@ -30,6 +41,15 @@ export const CategoryWindow = () => {
   const queryParams = new URLSearchParams(search);
   const plan = queryParams.get('plan');
   const categories = ["Family", "Milestones", "Gifting", "Friendship", "Couple", "Travel"];
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (categoryName) => {
+    // Perform any additional logic if needed
+    // For example, you can save categoryName to state or perform other actions
+
+    // Navigate to the desired route
+    navigate(`/sub_category?plan=${plan}&category=${encodeURIComponent(categoryName)}`);
+  };
 
   return (
     <div className="body">
@@ -37,22 +57,25 @@ export const CategoryWindow = () => {
       {/* Your other components */}
       <div className="category-cont">
         {categories.map((categoryName, index) => (
-          <NavLink style={{width:'46%'}} key={index} to={`/sub_category?plan=${plan}&category=${encodeURIComponent(categoryName)}`}>
+          <div
+            key={index}
+            style={{ width: '46%' }}
+            onClick={() => handleCategoryClick(categoryName)}
+          >
             <CategoryCard categoryName={categoryName} />
-          </NavLink>
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-export default CategoryWindow;
 
 
 export const SubCategoryWindow = ()=>{
     return(
-        <div className="body">
-            <MainHeading name="Select your Sub-Category"/>
+        <div className="body" style={{padding:'20px'}}>
+            <MainHeading name="Select Sub-Category"/>
             <SuperCategory/>
             <SubCategory/>
             <SubCategory/>
