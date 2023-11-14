@@ -5,7 +5,8 @@ import './product-grid.css';
 export default function ProductGrid(props) {
   const [products, setProducts] = useState([]);
   const infoValue = props.info; // Store props.info in a constant variable
-
+  
+  const flag = props.flag;
   useEffect(() => {
     if (infoValue) {
       const mappedProducts = infoValue.map((item) => ({
@@ -49,7 +50,7 @@ export default function ProductGrid(props) {
   };
 
   return (
-    <div className="container">
+    flag===0?<div className="container">
          
            {window.innerWidth > 768 && (
         <div className="row">
@@ -71,6 +72,7 @@ export default function ProductGrid(props) {
           ))}
         </div>
       )}
+    
       <div className="mt-5" style={{ display: "flex", justifyContent: "center" }}>
         <nav aria-label="Pagination">
           <ul className="pagination" style={{display:'flex',alignItems:'center',gap:'10px'}}>
@@ -102,7 +104,7 @@ export default function ProductGrid(props) {
           </ul>
         </nav>
       </div>
-    </div>
+    </div>:null
   );
 }
  

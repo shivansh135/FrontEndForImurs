@@ -20,7 +20,7 @@ import { Portfolio, Suvinor } from './dashboard/portfolio/portfolio';
 import { useLocation } from 'react-router-dom';
 import Productdash from './component/product/productdash';
 
-import { OrderSample } from './dashboard/new-form/forms/order-sample';
+import { OrderSample, Orderd2csample } from './dashboard/new-form/forms/order-sample';
 import CreateOrder from './dashboard/new-form/forms/order-form';
 import CheckOut from './dashboard/checkout/checkout';
 import { TailSpin } from 'react-loader-spinner';
@@ -51,6 +51,21 @@ function CheckRelode(){
 }
 
 function LandingRoutes({data={}}) {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Simulate fetching your product data from an API or other source
+    const fetchData = async () => {
+      // Replace this with your actual data-fetching logic
+      const response = await fetch(process.env.REACT_APP_API_URL + 'api/product'); // Example API endpoint
+      const data = await response.json();
+      setProducts(data.product);
+     
+    };
+
+    fetchData();
+  }, []);
+
   console.log(data)
   return (
     <Router>
@@ -66,7 +81,7 @@ function LandingRoutes({data={}}) {
             <Route path="/explore" element={<ExploreWindow/>} />
 
             <Route path='/orderD2C' element={<PriceD2C/>}/>
-
+            <Route path='/samples' element={<Orderd2csample data={products}/>} />
             <Route path='/category' element={data.phone?<CategoryWindow/>:<OtpD2C/>}/>
             
             <Route path='/sub_category' element={data.phone?<SubCategoryWindow/>:<OtpD2C/>}/>

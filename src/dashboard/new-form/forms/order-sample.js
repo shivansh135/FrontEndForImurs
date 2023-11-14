@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Dashboard } from '../../structure/structure';
-import { HedingSubheding } from '../../../component/headings/heading';
+import { HedingSubheding, MainHeading } from '../../../component/headings/heading';
 import CustomDropdown from '../form-component/formcomponents';
 import { FormGroup } from './order-form';
 import { ButtonSecondary } from '../../dash_buttons/buttons';
 import { ButtonPrimary } from '../../../component/button/button';
+import ProductGrid from '../../../component/product/product-grid/product-grid';
 
 export const OrderSample = (props) => {
   if (!props.data.isnew) {
@@ -173,3 +174,24 @@ export const OrderSample = (props) => {
     </Dashboard>
   );
 };
+
+export const Orderd2csample = (props)=>
+{
+
+
+
+  console.log(props.data);
+
+  return(
+
+    <div className="cardsspacing my-5">
+    {" "}
+    <ProductGrid info={props.data} flag={1} />
+  </div>
+  )
+
+
+
+
+
+}

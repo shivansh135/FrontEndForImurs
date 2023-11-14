@@ -13,6 +13,7 @@ import { MainHeading } from "../headings/heading";
 import Carousel from "../feedback/courosal/courosal/courosal";
 import Courosal from "../feedback/courosal/courosal/courosal";
 import { PopUpTest } from "../popup/test";
+import { FeatureCard, FeatureWindow } from "../exploremore/explore";
 
 export const Home = () => {
   const [info, setInfo] = useState(null);
@@ -48,7 +49,7 @@ export const Home = () => {
       <div className="cardsspacing">
         {" "}
         <MainHeading name="Imurs' Greatest Hits" />
-        <ProductGrid info={info} />
+        <ProductGrid info={info} flag={0}/>
       </div>
 
       <ProcessContainer />
@@ -60,8 +61,7 @@ export const Home = () => {
       </div>
 
       <Courosal />
-
-
+      <FeatureWindow/>
       <PartnerInvite />
     </div>
   );

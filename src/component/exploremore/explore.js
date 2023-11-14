@@ -30,3 +30,31 @@ export const ExploreWindow = ()=>{
         </div>
     )
 }
+
+export const FeatureWindow = ()=>{
+  return(
+    <div className='feature-cont'>
+      <FeatureCard img="/fetures_icons/time.svg" heading="Within 48 hours" sub_heading="Swift Personalization in just 48 hours"/>
+      
+      <FeatureCard img="/fetures_icons/revisions.svg" heading="3 Free Revisions" sub_heading="Perfecting memories, your way, hassle-free"/>
+
+      <FeatureCard img="/fetures_icons/pencil.svg" heading="Storytelling" sub_heading="Narratives etched in personalized elegance"/>
+      
+      <FeatureCard img="/fetures_icons/pencildot.svg" heading="Chic Layouts" sub_heading="Weaving memories into visual poetry"/>
+      
+      <FeatureCard img="/fetures_icons/caption.svg" heading="Classic Typefaces" sub_heading="Fonts evoking timeless reminiscence"/>
+      
+      <FeatureCard img="/fetures_icons/encrypt.svg" heading="Secured Details" sub_heading="Safely stored and transferred"/>
+    </div>
+  )
+}
+
+export const FeatureCard = ({img,heading,sub_heading})=>{
+  return(
+    <div className="desktop-features">
+      <img className="icon" alt="Icon" src={img} />
+      <div className="heading">{heading}</div>
+      <div className="sub-heading">{sub_heading}</div>
+    </div>
+  )
+}
