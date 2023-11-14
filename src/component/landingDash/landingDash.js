@@ -15,7 +15,7 @@ export const LandingSideNavigation = () => {
         </NavLink>
         <NavLink exact to='/orderD2C' className='button'>
           <img alt='logo' src='logos/landing_dash/orders.svg'/>
-          <span className='text'>Create</span>
+          <span className='text'>Orders</span>
         </NavLink>
         <NavLink exact to='/explore' className='button'>
           <img alt='logo' src='logos/landing_dash/explore.svg'/>

@@ -221,6 +221,7 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
     const { search } = useLocation();
     const queryParams = new URLSearchParams(search);
     const plan = queryParams.get("plan");
+    const category = queryParams.get("category");
     const categoryplan = queryParams.get("categoryname");
     const subcategoryplan = queryParams.get("subcategoryname");
     const [data, setData] = useState(null);
@@ -240,16 +241,51 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
           for (let i = 0; i < data.pricingData.length; i++) {
             if (data.pricingData[i]._id === plan) {
               setData(data.pricingData[i]);
-              setDiscount(Math.floor(data.pricingData[i].price * 0.05));
+              setDiscount(Math.ceil(data.pricingData[i].price * 0.05));
             }
           }
         } catch (error) {
           console.log(error);
         }
       };
-  
+
       fetchData();
     }, []);
+    
+    const pay = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}api/paymentD2C`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            plan,
+            category,
+            selectedOption,
+          }),
+          credentials: 'include',
+        });
+    
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    
+        const responseData = await response.json();
+        
+        // Check if responseData has the expected structure before accessing its properties.
+        if (responseData  && responseData.url) {
+          window.location.href = responseData.url;
+        } else {
+          console.error('Unexpected response data:', responseData);
+          // Handle unexpected response data as needed
+        }
+      } catch (error) {
+        console.error('Error during fetch:', error);
+        // Handle the error as needed
+      }
+    };
+    
   
     const calculateTotal = () => {
       const deliveryCharge = 70;
@@ -267,7 +303,7 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
     const calculatePayableAmount = () => {
       if (selectedOption === "downfront") {
         // Show payable amount as half of the total
-        return Math.floor(calculateTotal() / 2);
+        return Math.ceil(calculateTotal() / 2);
       } else {
         // For other options, payable amount is the same as the total
         return calculateTotal();
@@ -277,7 +313,7 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
     const handleSelect = (option) => {
       setSelectedOption(option);
       if (option === "upfront") {
-        setDiscount(Math.floor(data.price * 0.05));
+        setDiscount(Math.ceil(data.price * 0.05));
       } else {
         setDiscount(0);
       }
@@ -357,7 +393,7 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
             handleSelect("upfront");
           }}
         />
-        <div className="proceed-button">
+        <div className="proceed-button" onClick={()=>{pay()}}>
           Pay ₹ {calculatePayableAmount()}
         </div>
       </div>

@@ -82,13 +82,12 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
-    background-color: #fcfcfc;
     padding: 40px 40px;
   }
 
   .desktop-features {
     align-items: center;
-    background-color: var(--isabeline);
+    background-color: #33333210;
     display: inline-flex;
     flex-direction: column;
     gap: 16.88px;
@@ -173,7 +172,6 @@
 
     .desktop-features {
       align-items: center;
-      background-color: var(--isabeline);
       display: inline-flex;
       flex-direction: column;
       gap: 16.88px;

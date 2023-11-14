@@ -184,8 +184,8 @@ export const Orderd2csample = (props)=>
 
   return(
 
-    <div className="cardsspacing my-5">
-    {" "}
+    <div className="body">
+    <MainHeading name="Imurs gratest hits"/>
     <ProductGrid info={props.data} flag={1} />
   </div>
   )

@@ -10,6 +10,13 @@
     gap: 80px 0px;
 }
 
+.sample-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 14px;
+}
+
 @media screen and (max-width:786px) {
     .row{
         gap: 50px 0px;

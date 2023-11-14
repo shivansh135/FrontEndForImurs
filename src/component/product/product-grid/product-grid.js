@@ -48,7 +48,7 @@ export default function ProductGrid(props) {
       setCurrentPage(pageNumber);
     }
   };
-
+console.log(products)
   return (
     flag===0?<div className="container">
          
@@ -104,7 +104,15 @@ export default function ProductGrid(props) {
           </ul>
         </nav>
       </div>
-    </div>:null
+    </div>:(
+      <div className='sample-cont'>
+{products.map((product) => (
+            <div className="col-6 col-sm-4" key={product.id}>
+               <Productcard artwork={product.thumbnail} info={product} category={product.category} title={product.title}/>
+            </div>
+          ))}
+      </div>
+    )
   );
 }
  
