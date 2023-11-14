@@ -100,7 +100,22 @@ function mapStatusimgToString(status) {
   }
 }
 
-
+function mapStatusbuttonToString(status) {
+  switch (status) {
+      case 0:
+          return "Share Form";
+      case 1:
+      case 2:
+      case 3:return "Track Order"
+      case 4:return "Preview"
+      case 5:
+          return "Track Order";
+      case 6:
+          return "shipped";
+      default:
+          return "Unknown Status";
+  }
+}
 
 
 
@@ -114,7 +129,7 @@ function mapStatusimgToString(status) {
   {showAlert && <div className="alert">Your Sample Will be Delivered Shortly</div>}
   <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: "20px" }}>
     {orders.map((order) => (
-      < OrderCardV2   key={order._id} order={order} status={mapStatusToString(order.orderStatus)} img={mapStatusimgToString(order.orderStatus)} />
+      < OrderCardV2   key={order._id} order={order} status={mapStatusToString(order.orderStatus)} img={mapStatusimgToString(order.orderStatus)} buttonstatus={mapStatusbuttonToString(order.orderStatus)}/>
     ))}
   </div>
 </Dashboard>

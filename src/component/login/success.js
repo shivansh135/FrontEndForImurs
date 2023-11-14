@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './success.css'
 import { HedingSubheding, MainHeading } from '../headings/heading';
-import { FallingLines, Oval, TailSpin } from 'react-loader-spinner';
+import { FallingLines, Oval, TailSpin, ThreeDots } from 'react-loader-spinner';
 export default function Success() {
   useEffect(() => {
     // Check if the page has been reloaded before
@@ -32,6 +32,27 @@ export default function Success() {
   wrapperClass=""
   visible={true}
 />
+    </div>
+  );
+}
+
+export const Loadin = ()=>{
+
+  return (
+    <div className='body' style={{justifyContent:'center',alignItems:'center',marginTop:'200px',paddingBottom:'300px'}}>
+      
+
+<ThreeDots
+height="80" 
+width="80" 
+radius="9"
+color="var(--newpersian-red)"
+ariaLabel="three-dots-loading"
+wrapperStyle={{}}
+wrapperClassName=""
+visible={true}
+ />
+
     </div>
   );
 }

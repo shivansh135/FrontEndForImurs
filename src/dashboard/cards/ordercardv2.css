@@ -15,6 +15,7 @@
     height: 191px;
     position: relative;
     width: 148px;
+    filter: brightness(0.95)
 }
 
 .order-cardV2 .cont {

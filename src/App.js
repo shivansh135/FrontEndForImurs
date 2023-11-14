@@ -28,12 +28,16 @@ import { LandingDash } from './component/landingDash/landingDash';
 import { CategoryWindow, D2COrdersummry, PriceD2C, SubCategoryWindow } from './component/pricingD2c/priced2c';
 import { OtpD2C } from './component/login/loginD2C';
 import Profile_SettingsD2C from './component/profileSettingD2C/form';
+import { ExploreWindow } from './component/exploremore/explore';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    document.querySelector('.landingMain').scrollTo(0, 0);
+    document.querySelector('.landingMain').scrollTo({
+      top:((document.querySelector('.landingMain').scrollTop == 1)?2:1),
+      behavior:'smooth'
+    });
   }, [pathname]);
 
   return null;
@@ -59,6 +63,7 @@ function LandingRoutes({data={}}) {
             <Route path="/product" element={<Product />} />
             <Route path="/register" element={<Form />} />
             <Route path="/plans" element={<Plan value={''} />} />
+            <Route path="/explore" element={<ExploreWindow/>} />
 
             <Route path='/orderD2C' element={<PriceD2C/>}/>
 

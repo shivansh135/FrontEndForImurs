@@ -1,6 +1,6 @@
 import React from "react";
 import "./ordercardv2.css";
-import ico from ".//CoupleOrder.svg";
+import ico from ".//defaultmag.jpg";
 export const OrderCardV2 = (props) => {
     const formattedDate = dateConvert(props.order.createdAt);
 
@@ -45,7 +45,7 @@ export const OrderCardV2 = (props) => {
                     </div>
                 </div>
                 <div className="button">
-                    <div className="text-2">ORDER EXTRA COPY</div>
+                    <div className="text-2">{props.buttonstatus}</div>
                 </div>
             </div>
         </div>

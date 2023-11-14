@@ -1,0 +1,113 @@
+.explore-card-cont{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;
+}
+
+.explore-card {
+    align-items: flex-start;
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #33333240;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px 20px;
+    position: relative;
+  }
+  
+  .explore-card .heading {
+    align-self: stretch;
+    color: var(--jet-black);
+    font-family: freight-big-pro, Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+  }
+  
+  .explore-card .image {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 266/268px;
+  }
+  
+  .explore-card .explore-text {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: relative;
+  }
+  
+  .explore-card .link {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .explore-card .text {
+    color: var(--newjet-black);
+    font-family: "HK Grotesk-MediumLegacy", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.25px;
+    position: relative;
+    text-decoration: underline;
+    width: fit-content;
+  }
+  
+  .explore-card .icon {
+    height: 18px;
+    position: relative;
+    width: 18px;
+  }
+
+  @media screen and (min-width:769px) {
+    .explore-card-cont{
+       
+    }
+    
+    .explore-card {
+        padding: 15px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 30%;
+      }
+      
+      .explore-card .heading {
+        font-size: 28px;
+      }
+      
+      .explore-card .image {
+        aspect-ratio: 1/1;
+      }
+      
+      .explore-card .explore-text {
+       font-size: 14px;
+      }
+      
+      .explore-card .link {
+        
+      }
+      
+      .explore-card .link .text {
+        font-size: 16px;
+      }
+  }
+  

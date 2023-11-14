@@ -26,7 +26,7 @@
     align-self: stretch;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-color: #000000;
+    border-color: #3333324d;
     display: flex;
     flex: 0 0 auto;
     justify-content: space-between;
@@ -170,7 +170,7 @@
   align-items: flex-start;
     background-color: var(--isabeline);
     border: 0.25px solid;
-    border-color: #000000;
+    border-color: #3333324d;
     display: inline-flex;
     flex-direction: column;
     gap: 4px;
@@ -339,7 +339,7 @@
   @media screen and (max-width: 768px) {
     .pricing-card-new-d2c {
       gap:20px;
-      padding: 20px;
+      padding: 20px 30px;
     }
     
     .pricing-card-new-d2c .datails {
@@ -400,7 +400,7 @@
     align-items: flex-start;
     background-color: var(--isabeline);
     border: 0.25px solid;
-    border-color: #000000;
+    border-color: #3333324d;
     display: inline-flex;
     flex-direction: column;
     gap: 4px;
@@ -456,7 +456,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
     position: relative;
   }
   
@@ -465,7 +464,7 @@
     align-self: stretch;
     border-bottom-style: solid;
     border-bottom-width: 0.25px;
-    border-color: #333332;
+    border-color: #3333324d;
     display: flex;
     flex: 0 0 auto;
     gap: 10px;
@@ -510,7 +509,7 @@
 .sub-category-card {
   align-items: center;
   border: 0.25px solid;
-  border-color: #333332;
+  border-color: #3333324d;
   display: flex;
   gap: 10px;
   padding: 15px 10px;
@@ -521,6 +520,7 @@
   height: 20px;
   position: relative;
   width: 20px;
+  opacity: 0.4;
 }
 
 .sub-category-card .category-sub-text {

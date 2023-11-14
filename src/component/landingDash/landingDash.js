@@ -6,23 +6,23 @@ export const LandingSideNavigation = () => {
       <div className="side-navigation">
         <div className="headding">imurs</div>
         <NavLink exact to='/' className='button'>
-          <img alt='logo' src='logos/grid-view.svg'/>
-          <span className='text'>Dashboard</span>
+          <img alt='logo' src='logos/landing_dash/home.svg'/>
+          <span className='text'>Home</span>
         </NavLink>
-        <NavLink exact to='/orders' className='button'>
-          <img alt='logo' src='logos/local-mall.svg'/>
+        <NavLink exact to='/samples' className='button'>
+          <img alt='logo' src='logos/web-stories.svg'/>
           <span className='text'>Samples</span>
         </NavLink>
         <NavLink exact to='/orderD2C' className='button'>
-          <img alt='logo' src='logos/sell.svg'/>
+          <img alt='logo' src='logos/landing_dash/orders.svg'/>
           <span className='text'>Create</span>
         </NavLink>
-        <NavLink exact to='/portfolio' className='button'>
-          <img alt='logo' src='logos/web-stories.svg'/>
+        <NavLink exact to='/explore' className='button'>
+          <img alt='logo' src='logos/landing_dash/explore.svg'/>
           <span className='text'>Explore</span>
         </NavLink>
         <NavLink exact to='/account' className='button'>
-          <img alt='logo' src='logos/redeem.svg'/>
+          <img alt='logo' src='logos/landing_dash/profile.svg'/>
           <span className='text'>Profile</span>
         </NavLink>
       </div>

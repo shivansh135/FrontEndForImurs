@@ -4,6 +4,8 @@ import { ButtonSecondary } from "../button/button";
 import "./navbar.css";
 
 export const NavbarLanding = () => {
+    const currentPathname = window.location.pathname;
+
     const [scrolling, setScrolling] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
     const [isMenuclosing, setIsMenuClosing] = useState(false); 
@@ -11,6 +13,9 @@ export const NavbarLanding = () => {
     useEffect(() => {
         setTimeout(() => {
             document.querySelector('.landingMain').addEventListener('scroll', handleScroll);
+            if(currentPathname !=="/"){
+                setScrolling(true)
+            }
         return () => {
             document.querySelector('.landingMain').removeEventListener('scroll', handleScroll);
         };
@@ -19,7 +24,7 @@ export const NavbarLanding = () => {
     }, []);
 
     const handleScroll = () => {
-        if (document.querySelector('.landingMain').scrollTop > 200) {
+        if (document.querySelector('.landingMain').scrollTop > 200 || window.location.pathname!=="/") {
             setScrolling(true);
         } else {
             setScrolling(false);
@@ -38,7 +43,6 @@ export const NavbarLanding = () => {
             setIsMenuOpen(false);
         },1000)   
     };
-    const currentPathname = window.location.pathname;
     
     
    
@@ -46,14 +50,19 @@ export const NavbarLanding = () => {
     return (
         <div className={`nav ${scrolling ? 'scrolled' : ''}`}>
 
-            <div className="menu">
-            <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={toggleMenu}>
-           <path d="M0 19.2211V17.4711H28V19.2211H0ZM0 10.875V9.12495H28V10.875H0ZM0 2.52881V0.778809H28V2.52881H0Z" fill="#333332"/>
-           </svg>
+            <div className="menu" style={{display:'none'}}>
+                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={toggleMenu}>
+                    <path d="M0 19.2211V17.4711H28V19.2211H0ZM0 10.875V9.12495H28V10.875H0ZM0 2.52881V0.778809H28V2.52881H0Z" fill="#333332"/>
+                </svg>
            </div>
 
           { /* <i className='fa-solid fa-bars menu' ></i>*/}
-            <NavLink exact to="/" className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>imurs</NavLink>
+            <NavLink exact to="/" className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>
+            <svg style={{opacity:`${(currentPathname!=='/') ? '1' : '0'}`,pointerEvents:`${(currentPathname!=='/') ? 'all' : 'none'}`}} onClick={()=>{window.history.back()}} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+                <span>imurs</span>
+            </NavLink>
             <ButtonSecondary direction={true} to="/plans" className="hidden"/>
             
             {/* Pass the closeMenu function as a prop */}

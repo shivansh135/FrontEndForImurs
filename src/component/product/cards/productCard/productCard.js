@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./productCard.css";
 import { ButtonSecondary } from "../../../../dashboard/dash_buttons/buttons";
+import { NavLink } from "react-router-dom";
 
 export const Product = (props) => {
 
@@ -47,7 +48,7 @@ export const ProductDashbord = (props) => {
     
     
         return (
-            <div className="product">
+            <NavLink to='/product' state={{info:props.product}} className="product">
                 <img className="image" alt="Image" src={`https://drive.google.com/uc?export=view&id=${props.product.thumbnail}&cache-control=max-age=172800`} />
                 <div className="text-wrap">
                     <p className="palak-and-dharmesh">
@@ -62,7 +63,6 @@ export const ProductDashbord = (props) => {
                     <img className="arrow-outward" alt="Arrow outward" src="arrow_outward.svg" />
                 </div>
                 </div>
-            </div>
+            </NavLink>
         );
-    };
-    
+    }
