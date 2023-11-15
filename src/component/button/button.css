@@ -62,7 +62,7 @@
 }
 
 .button-primary .text-wrapper {
-  color: #f7f5f2;
+  color: #f7f5f2 !important;
   font-family: 'HK Grotesk-MediumLegacy' Helvetica;
   font-size: 16px;
   font-weight: 600;
@@ -111,7 +111,7 @@
 }
 
 .button-primary:hover .text-wrapper {
-  color: #333333;
+  color: #333333 !important;
 }
 
 

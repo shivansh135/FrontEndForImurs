@@ -29,6 +29,7 @@ import { CategoryWindow, D2COrdersummry, PriceD2C, SubCategoryWindow } from './c
 import { OtpD2C } from './component/login/loginD2C';
 import Profile_SettingsD2C from './component/profileSettingD2C/form';
 import { ExploreWindow } from './component/exploremore/explore';
+import CheckOutD2C from './component/checkoutD2C/checkout';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -96,6 +97,7 @@ function LandingRoutes({data={}}) {
             <Route path='/termsandconditions' element={<TandC/>} />
             <Route path='/contactus' element={<ContactUS/>} />
             <Route path='/xxyyzz' element={<Success/>} />
+            <Route path='/processPayment' element={<CheckOutD2C data={data}/>} />
 
 
             <Route path='/checkout' element={<D2COrdersummry/>}/>

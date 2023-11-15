@@ -4,6 +4,7 @@ import { CategoryCard, PricingCardNewD2C, SubCategory, SuperCategory } from "./c
 import "./priced2c.css"
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom"
 import Success, { Loadin } from "../login/success"
+import { ButtonPrimary } from "../button/button"
 
 export const PriceD2C = () => {
   const navigate = useNavigate();
@@ -35,20 +36,27 @@ export const PriceD2C = () => {
     fetchData();
   }, []);
 
+
+  const [content,setcontent] = useState(null);
   const handleCardClick = (planId,planname) => {
    
 
-
-    localStorage.setItem('continueOrderLink',`/category?plan=${planId}`)
-    navigate(`/category?plan=${planId}`);
-
-
+      
+      setcontent(planId);
         
 
 
   };
 
+const buttonclick=()=>
+{
+  if(content!==null)
+ {
+  localStorage.setItem('continueOrderLink',`/category?plan=${content}`)
+navigate(`/category?plan=${content}`);
+ }
 
+}
 
   
  
@@ -64,23 +72,27 @@ export const PriceD2C = () => {
       <MainHeading name="Select Your Edition" />
       {data!==null ? <div className="priceD2C-cont">
       
-       <div onClick={() => handleCardClick(data.pricingData[0]._id, data.pricingData[0].name)}>
-          <PricingCardNewD2C info={data.pricingData[0]}/>
+       <div   style={{background:data.pricingData[0]._id===content?'var( --newjet-black)':null}}  onClick={() => handleCardClick(data.pricingData[0]._id, data.pricingData[0].name)}>
+          <PricingCardNewD2C info={data.pricingData[0]} flag={data.pricingData[0]._id===content?1:0} id={0}/>
         </div>
-        <div onClick={() => handleCardClick(data.pricingData[1]._id, data.pricingData[1].name)}>
-          <PricingCardNewD2C info={data.pricingData[1]}/>
+        <div style={{background:data.pricingData[1]._id===content?'var( --newjet-black)':null}}  onClick={() => handleCardClick(data.pricingData[1]._id, data.pricingData[1].name)}>
+          <PricingCardNewD2C info={data.pricingData[1]} flag={data.pricingData[1]._id===content?1:0} id={1}/>
         </div>
-        <div onClick={() => handleCardClick(data.pricingData[2]._id, data.pricingData[2].name)}>
-          <PricingCardNewD2C info={data.pricingData[2]}/>
+        <div style={{background:data.pricingData[2]._id===content?'var( --newjet-black)':null}}  onClick={() => handleCardClick(data.pricingData[2]._id, data.pricingData[2].name)}>
+          <PricingCardNewD2C info={data.pricingData[2]} flag={data.pricingData[2]._id===content?1:0} id={2}/>
         </div>
-
+         
       
  
       </div>:<Loadin></Loadin>}
-      
+      <div onClick={buttonclick} style={{width:'80%',margin:'auto'}}>
+        <ButtonPrimary text="proceed"/>
+      </div>  
     </div>
   );
 };
+
+
 
 
 
@@ -226,7 +238,11 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
     const subcategoryplan = queryParams.get("subcategoryname");
     const [data, setData] = useState(null);
     const [discount, setDiscount] = useState(0);
+    const [couponCode, setCouponCode] = useState('');
+    const [appliedCoupon, setAppliedCoupon] = useState(null);
   
+
+
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -263,6 +279,7 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
             plan,
             category,
             selectedOption,
+            couponCode
           }),
           credentials: 'include',
         });
@@ -286,19 +303,61 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
       }
     };
     
+    const applyCoupon = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}api/applyCoupon`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            couponCode,
+          }),
+          credentials: 'include',
+        });
   
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+  
+        const couponData = await response.json();
+  
+        // Check if couponData has the expected structure before accessing its properties.
+        if (couponData && couponData.valid && couponData.discount) {
+          setAppliedCoupon(couponData);
+        } else {
+          console.error('Invalid coupon data:', couponData);
+          // Handle invalid coupon as needed
+        }
+      } catch (error) {
+        console.error('Error during coupon fetch:', error);
+        // Handle the error as needed
+      }
+    };
+  
+
     const calculateTotal = () => {
       const deliveryCharge = 70;
       const magazinePrice = data.price;
-      let total = magazinePrice + deliveryCharge;
-  
-      if (selectedOption === "upfront") {
+      let total = magazinePrice;
+    
+      if (appliedCoupon && appliedCoupon.valid) {
+        // Check if the coupon discount exceeds the total magazine price
+        if (appliedCoupon.discount > total) {
+          total = 0;
+        } else {
+          total -= appliedCoupon.discount;
+        }
+      }
+    
+      if (selectedOption === "upfront" && total > deliveryCharge) {
         // Apply 5% discount for upfront payment
         total -= discount;
       }
-  
-      return total;
+    
+      return total + deliveryCharge;
     };
+    
   
     const calculatePayableAmount = () => {
       if (selectedOption === "downfront") {
@@ -348,10 +407,19 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
             </div>
             <div className="price">₹ 70</div>
           </div>
+
+          {appliedCoupon && appliedCoupon.valid && (
+            <div className="cont">
+            <div className="svg-text">
+              <div className="text">Coupon Applied</div>
+            </div>
+            <div className="price">- ₹ {appliedCoupon.discount}</div>
+          </div>
+          )}
   
           <div className="cont">
             <div className="svg-text">
-              <div className="text">5% Discount</div>
+              <div className="text">Upfront Saving</div>
             </div>
             <div className="price">- ₹ {discount}</div>
           </div>
@@ -367,15 +435,34 @@ const CustomRadio = ({ label, description, isSelected, onSelect }) => {
               <span>₹ {calculatePayableAmount()}</span>
             </div>
           )}
+          {appliedCoupon && appliedCoupon.discount + discount > data.price  && (
+            <div className="total" style={{ color: 'var(--persian-red)', border: 'none', padding: '0' }}>
+              <span>Max Discount</span>
+              <span>₹ {data.price}</span>
+            </div>
+          )}
         </div>
   
         <div className="coupan-cont">
-          <div className="heading">Nostalgic Deals</div>
-          <div className="input-cont">
-            <input type="text" className="cupanCode" placeholder="APPLY COUPON" />
-            <div className="but">Apply</div>
+        <div className="heading">Nostalgic Deals</div>
+        <div className="input-cont">
+          <input
+            type="text"
+            className="cupanCode"
+            placeholder="APPLY COUPON"
+            value={couponCode}
+            onChange={(e) => setCouponCode(e.target.value)}
+          />
+          <div className="but" onClick={applyCoupon}>
+            Apply
           </div>
         </div>
+        {appliedCoupon && appliedCoupon.valid && (
+          <div className="applied-coupon">
+            Applied Coupon: - ₹ {appliedCoupon.discount}
+          </div>
+        )}
+      </div>
   
         <CustomRadio
           label="Pay 50%-50%"

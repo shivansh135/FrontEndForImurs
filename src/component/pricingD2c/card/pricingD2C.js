@@ -4,26 +4,28 @@ import "./pricingD2C.css";
 
 export const PricingCardNewD2C = (props) => {
   return (
-    <div className="pricing-card-new-d2c">
+    <div className="pricing-card-new-d2c" style={{color:props.flag===1?'white':'black'}}>
       <div className="datails">
-        <div className="name-cont">
+        <div className="name-cont" style={{borderColor:props.flag===1?'white':'black'}}>
           <div className="name">{props.info.name}</div>
           <div className="svg-text">
-            <img className="svg" alt="Svg" src="pricingD2C_icons/pages.svg" />
+            <img className="svg" alt="Svg" src="pricingD2C_icons/pages.svg" style={{filter:props.flag===1?'brightness(100)':null}} />
             <div className="text">{props.info.pages} Pages</div>
           </div>
         </div>
-        <div className="bullets">
+       
+        <div className="bullets" style={{opacity:props.id===0?0:1}}>
           <div className="svg-text">
-            <img className="svg" alt="Svg" src="pricingD2C_icons/1.svg" />
+            <img className="svg" alt="Svg" src="pricingD2C_icons/1.svg" style={{filter:props.flag===1?'brightness(100)':null}} />
             <div className="text">HD Print</div>
           </div>
           <div className="svg-text">
-            <img className="svg" alt="Svg" src="pricingD2C_icons/2.svg" />
+            <img className="svg" alt="Svg" src="pricingD2C_icons/2.svg"style={{filter:props.flag===1?'brightness(100)':null}} />
             <div className="text">Matt Laminated</div>
           </div>
-          <div className="svg-text">
-            <img className="svg" alt="Svg" src="pricingD2C_icons/3.svg" />
+        
+          <div className="svg-text" style={{opacity:props.id===2?1:0}}>
+            <img className="svg" alt="Svg" src="pricingD2C_icons/3.svg" style={{filter:props.flag===1?'brightness(100)':null}} />
             <div className="text">Embossed Cover</div>
           </div>
         </div>
@@ -58,7 +60,7 @@ export const SuperCategory = (props)=>{
   return(
     <div className="super-category">
     <div className="icon-category-name">
-      <img className="svg" alt="svg" src={`category_logo/${props.name}.svg`} />
+      <img className="svg" style={{filter:'brightness(0.4)'}} alt="svg" src={`category_logo/${props.name}.svg`} />
       <div className="text-wrapper">{props.name}</div>
     </div>
     <div className="div">Select Sub - Category</div>

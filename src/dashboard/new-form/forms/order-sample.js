@@ -185,7 +185,7 @@ export const Orderd2csample = (props)=>
   return(
 
     <div className="body">
-    <MainHeading name="Imurs gratest hits"/>
+    <MainHeading name="Imurs’ Greatest Hits"/>
     <ProductGrid info={props.data} flag={1} />
   </div>
   )

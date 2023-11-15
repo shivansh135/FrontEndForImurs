@@ -175,7 +175,7 @@ a{
         flex-direction: row;
     }
     .nav .navTitle {
-        font-size: 32px; /* Adjust font size for mobile */
+        font-size: 24px; /* Adjust font size for mobile */
         gap: 10px;
         width: 100%;
         display: flex;

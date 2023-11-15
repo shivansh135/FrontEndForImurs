@@ -168,7 +168,7 @@
 
 .category-card-stroke {
   align-items: flex-start;
-    background-color: var(--isabeline);
+    background-color: var(--jet-black);
     border: 0.25px solid;
     border-color: #3333324d;
     display: inline-flex;
@@ -197,7 +197,7 @@
 }
 
 .category-card-stroke .text-wrapper {
-  color: var(--jet-black);
+  color: var(--isabeline);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 16px;
     font-weight: 600;
@@ -212,7 +212,7 @@
 }
 
 .category-card-stroke .div {
-  color: var(--jet-black);
+  color: var(--isabeline);
     font-family: "HK Grotesk-RegularLegacy", Helvetica;
     font-size: 8px;
     font-weight: 400;
@@ -398,7 +398,6 @@
   /*Category card*/
   .category-card-stroke {
     align-items: flex-start;
-    background-color: var(--isabeline);
     border: 0.25px solid;
     border-color: #3333324d;
     display: inline-flex;
@@ -423,7 +422,6 @@
   }
   
   .category-card-stroke .text-wrapper {
-    color: var(--jet-black);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 16px;
     font-weight: 600;
@@ -437,7 +435,6 @@
   }
   
   .category-card-stroke .div {
-    color: var(--jet-black);
     font-family: "HK Grotesk-RegularLegacy", Helvetica;
     font-size: 8px;
     font-weight: 400;
@@ -511,8 +508,9 @@
   border: 0.25px solid;
   border-color: #3333324d;
   display: flex;
-  gap: 10px;
-  padding: 15px 10px;
+  background-color: var(--jet-black);
+  gap: 15px;
+  padding: 20px 16px;
   position: relative;
 }
 
@@ -520,7 +518,7 @@
   height: 20px;
   position: relative;
   width: 20px;
-  opacity: 0.4;
+  filter: invert(1);
 }
 
 .sub-category-card .category-sub-text {
@@ -536,21 +534,22 @@
 
 .sub-category-card .text-wrapper {
   align-self: stretch;
-  color: var(--jet-black);
+  color: var(--isabeline);
   font-family: "HK Grotesk-MediumLegacy", Helvetica;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.24px;
   line-height: normal;
   margin-top: -1px;
+  text-transform: capitalize;
   position: relative;
 }
 
 .sub-category-card .div {
   align-self: stretch;
-  color: var(--jet-black);
+  color: var(--isabeline);
   font-family: "HK Grotesk-RegularLegacy", Helvetica;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;

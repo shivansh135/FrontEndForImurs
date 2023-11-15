@@ -1,3 +1,4 @@
+import { HedingSubheding } from '../headings/heading';
 import './explore.css'
 
 export const ExploreBanner = ({heading,text,linktext,img})=>{
@@ -19,6 +20,7 @@ export const ExploreBanner = ({heading,text,linktext,img})=>{
 export const ExploreWindow = ()=>{
     return(
         <div className='body' style={{padding:'20px'}}>
+          <HedingSubheding heading="Weaving memories, just for you" sub_heading = "500+ Delivered" />
             <div className='explore-card-cont'>
             <ExploreBanner/>
             <ExploreBanner/>
